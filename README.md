@@ -92,35 +92,36 @@ This is where you will receive feedback from Mx. Collard.
 
 ## Milestone 1
 
-E Period Due: Wednesday Nov. 3rd @ 11:59 PM C Period Due: Thursday Nov. 4th @
-11:59 PM
+* E Period Due: Wednesday Nov. 3rd @ 11:59 PM 
+* C Period Due: Thursday Nov. 4th @ 11:59 PM
 
 Complete flowcharts and design document
 
 ## Milestone 2
 
-E Period Due: Monday Nov. 8th @ 11:59 PM C Period Due: Tuesday Nov 9th @ 11:59
-PM
+* E Period Due: Monday Nov. 8th @ 11:59 PM 
+* C Period Due: Tuesday Nov 9th @ 11:59 PM
 
 Complete Word Game
 
 ## Milestone 3
 
-E Period Due: Wednesday Nov 10th @ 11:59 PM C Period Due: Thursday Nov 11th @
-11:59 PM
+* E Period Due: Wednesday Nov 10th @ 11:59 PM 
+* C Period Due: Thursday Nov 11th @ 11:59 PM
 
 Setting up Unity Coming Soon!
 
 ## Milestone 4
 
-E Period Due: Wednesday Nov 17th @ 11:59 PM C Period Due: Thursday Nov 18th @
-11:59 PM
+* E Period Due: Wednesday Nov 17th @ 11:59 PM 
+* C Period Due: Thursday Nov 18th @ 11:59 PM
 
 Complete the Snowman Game Coming Soon!
 
 ## Milestone 5
 
-E Period Due: Thursday Nov 18th C Period Due: Friday Nov 19th
+* E Period Due: Thursday Nov 18th
+* C Period Due: Friday Nov 19th
 
 Complete Written Response
 
