@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/WordGuesser/WordGuesser.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/WordGuesser/WordGuesser.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/WordGuesser/WordGuesser.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "deploy",
+            "command": "cp",
+            "windows": {
+                "command": "robocopy",
+                "args": [
+                    "${workspaceFolder}\\WordGuesser\\bin\\Debug\\net5.0\\",
+                    "${workspaceFolder}\\SnowManUnity\\Assets\\Binaries\\",
+                    "WordGuesser.dll",
+                    "WordGuesser.xml"
+                ]
+            },
+            "type": "process",
+            "args": [
+                "${workspaceFolder}/WordGuesser/bin/Debug/net5.0/WordGuesser.dll",
+                "${workspaceFolder}/WordGuesser/bin/Debug/net5.0/WordGuesser.xml",
+                "${workspaceFolder}/SnowManUnity/Assets/Binaries/"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
