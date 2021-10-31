@@ -20,9 +20,9 @@ Get it from the VS Code Market Place: [LINK](https://marketplace.visualstudio.co
 
 ### Unity 2020.3.21f / Unity Hub
 
-You should download an install Unity Hub and Unity 2020.3.21f as homework. Here is a video with instructions: [VIDEO]
+You should download an install Unity Hub and Unity 2020.3.21f as homework.
 
-TODO: Create installation video
+Coming soon: A video on completing the Unity installation
 
 ## Project Setup
 
@@ -57,6 +57,10 @@ TODO: Add images
 
 Never commit to the main branch! This can cause problems for your entire team. You should *ALWAYS* work on a new branch and create pull requests when you're ready to combine your work.
 
+### Disallow committing to main branch
+
+Update settings to disallow committing to the main branch.
+
 ### Creating a Branch
 
 Create a branch that matches your name. This is the branch where you will do all of your own work.
@@ -90,10 +94,19 @@ Complete flowcharts and design document
 Complete Word Game
 
 ## Milestone 3
+ 
+Setup Unity Project 
 
-Setup Unity Project - Each member forks their group project.
+Coming Soon!
 
 ## Milestone 4
 
-Finished Snowman Game
+Finish Snowman Game
 
+Coming Soon!
+
+## Milestone 5
+
+Complete Written Response
+
+Coming Soon!
