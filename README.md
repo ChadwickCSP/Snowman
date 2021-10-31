@@ -12,6 +12,12 @@ This plugin allows you to quickly run C# Unit tests inside VS Code.
 
 Get it from the VS Code Market Place: [LINK](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
 
+### Markdown All in One
+
+This plugin adds a bunch of nice features for writing Markdown.
+
+Get it from the VS Code Market Place: [LINK](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
 ### Unity 2020.3.21f / Unity Hub
 
 You should download an install Unity Hub and Unity 2020.3.21f as homework. Here is a video with instructions: [VIDEO]
@@ -85,7 +91,7 @@ Complete Word Game
 
 ## Milestone 3
 
-Setup Unity Project
+Setup Unity Project - Each member forks their group project.
 
 ## Milestone 4
 
