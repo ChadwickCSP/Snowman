@@ -83,6 +83,10 @@ Create a pull request to the `main` branch. Add your group members a reviewer.
 Go to your group members pull request. Add a comment. Approve their pull
 request.
 
+### Merging Main into your Branch
+
+TODO: Show how to merge main into branch
+
 ## Create a Feedback Pull Request
 
 Create a pull request from your `main` branch to the `ChadwickCSP/main` branch.
