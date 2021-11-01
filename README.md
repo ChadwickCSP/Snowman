@@ -300,33 +300,114 @@ This is where you will receive feedback from Mx. Collard.
 * E Period Due: Wednesday Nov. 3rd @ 11:59 PM 
 * C Period Due: Thursday Nov. 4th @ 11:59 PM
 
-Complete flowcharts and design document
+### Task List
+
+- [ ] Review Design Document located at `WordGuesser/README.md`
+- [ ] Review Diagrams in `diagrams` folder
+- [ ] Decide who will complete each diagram
+- [ ] As a team, complete these methods:
+- [ ] IsGameWon()
+- [ ] IsGameOver()
+- [ ] GetIncorrectGuesses()
+- [ ] GetGuessLimit()
+- [ ] CheckGuess(string guess)
+- [ ] CountLetter(char guess)
+- [ ] GetGuessedLetters()
+- [ ] GetFullWord()
+- [ ] GetWord()
+- [ ] Complete all TODOs on the design document
+
+For this milestone, you will complete the design document for a word guessing game library.
+
+### Getting Started
+
+There are 9 flowcharts that need to be completed. Several of them are quite simple to complete. For a group of 2 people,
+I recommend completing the diagrams in `WordGamePart1` together. Then, dividing the work up for each person to complete
+one of `WordGamePart2` or `WordGamePart3`.
+
+When you're finished, you should export the completed flowcharts as PNGs and add them to the `WordGuesser/README.md` file.
+
+### Deliverable
+
+To submit Milestone 1, you should complete all of the flowcharts listed above as well as updating the `WordGuesser/README.md` file
+to contain PNG images of the finished flowcharts. Finally, you should complete all of the TODOs on your design document.
+
+Finally, all of the work should be merged to your `main` branch and a tag called `milestone-1` should be created.
+
+If you later decide you would like to change the commit for milestone-1 you may create additional tags with a version number. 
+For example, milestone-1-v2 or milestone-1-v3. For final grading, the milestone-1 tag with the greatest version number will be used. 
+After creating your tag, don't forget to push it to GitHub and verify it is available online.
 
 ## Milestone 2
 
-* E Period Due: Monday Nov. 8th @ 11:59 PM 
-* C Period Due: Tuesday Nov 9th @ 11:59 PM
-
-Complete Word Game
-
-## Milestone 3
-
 * E Period Due: Wednesday Nov 10th @ 11:59 PM 
 * C Period Due: Thursday Nov 11th @ 11:59 PM
+
+For this milestone, you will implement the IWordGame interface using the flowcharts from Milestone 1.
+
+### Getting Started
+
+Coming Soon: VIDEO
+
+1. On one members branch, create a file called `WordGame.cs` within the `WordGuesser/src/WordGame` folder.
+2. Add the following starter code to the file:
+
+```csharp
+namespace WordGuesser
+{
+    public class WordGame : IWordGame
+    {
+
+    }
+}
+```
+
+3. Click on `IWordGame`, click the lightbulb icon that appears on the left, and select `Implement Interface`
+
+![Implement Interface](support/implementInterface.png)
+
+4. Add the member variables you specified during Milestone 1.
+5. Add the constructor from Milestone 1 and update it to initialize your variables appropriately.
+6. Update `Config.cs` to use your constructor
+
+### Testing Milestone 2
+
+For Milestone 2, you have been provided with Unit Tests that are designed to help you test your code. To run these,
+
+1. Select the Test icon in VS Code.
+
+![Testing](support/testing.png)
+
+2. Click the Run All button at the top of the Testing page
+
+![Run All](support/testall.png)
+
+3. Initially, all of the tests will fail.
+
+![All Fail](support/allfail.png)
+
+4. However, as you complete each method more tests should begin to pass. To receive full points for Computational Thinking, all tests should pass.
+
+### Deliverable
+
+To submit Milestone 3, you should finish your implementation of the `IWordGame` interface and pass all tests.
+
+Finally, all of the work should be merged to your `main` branch and a tag called `milestone-2` should be created.
+
+If you later decide you would like to change the commit for milestone-2 you may create additional tags with a version number. 
+For example, milestone-2-v2 or milestone-2-v3. For final grading, the milestone-2 tag with the greatest version number will be used. 
+After creating your tag, don't forget to push it to GitHub and verify it is available online.
+
+## Milestone 3
 
 Setting up Unity Coming Soon!
 
 ## Milestone 4
 
-* E Period Due: Wednesday Nov 17th @ 11:59 PM 
-* C Period Due: Thursday Nov 18th @ 11:59 PM
 
 Complete the Snowman Game Coming Soon!
 
 ## Milestone 5
-
-* E Period Due: Thursday Nov 18th
-* C Period Due: Friday Nov 19th
 
 Complete Written Response
 
