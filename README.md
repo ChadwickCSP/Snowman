@@ -27,6 +27,7 @@ game. Then, using that library, you will implement a Guessing Game called
     - [Getting Started](#getting-started)
     - [Deliverable](#deliverable)
   - [Milestone 2](#milestone-2)
+    - [Task List](#task-list-1)
     - [Getting Started](#getting-started-1)
     - [Testing Milestone 2](#testing-milestone-2)
     - [Deliverable](#deliverable-1)
@@ -411,6 +412,23 @@ and verify it is available online.
 
 For this milestone, you will implement the IWordGame interface using the
 flowcharts from Milestone 1.
+
+### Task List
+
+- [ ] Create `WordGame.cs`
+- [ ] Create a class `WordGame` that implements `IWordGame`
+- [ ] Add a Constructor for `WordGame`
+- [ ] Update `Config.cs` to use `WordGame`
+- [ ] Implement each method in `IWordGame`:
+- [ ] IsGameWon()
+- [ ] IsGameOver()
+- [ ] GetIncorrectGuesses()
+- [ ] GetGuessLimit()
+- [ ] CheckGuess(string guess)
+- [ ] CountLetter(char guess)
+- [ ] GetGuessedLetters()
+- [ ] GetFullWord()
+- [ ] GetWord()
 
 ### Getting Started
 
