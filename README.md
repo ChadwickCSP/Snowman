@@ -101,7 +101,25 @@ For this project, each group member will have their own branch.
 Create a branch that matches your name. This is the branch where you will do all
 of your own work.
 
-Add your name to the `Authors` Section of the WordGuesser/README.md document.
+1. Click on the source control icon in VS Code
+
+![Source Control](support/sourcControl.png)
+
+2. Select the `...` Menu > Branch > Create Branch ...
+
+![Create Branch](support/createBranch.png)
+
+3. Your branch name should be the first part of your email address. For example, `jcollard`
+
+4. Add your name to the `Authors` Section of the WordGuesser/README.md document.
+
+5. Commit your change.
+
+6. Click Publish Changes
+
+![Publish Changes](support/publishChanges.png)
+
+
 
 ### Create a Pull Request
 
