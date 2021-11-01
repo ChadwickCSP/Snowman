@@ -94,8 +94,27 @@ a conflict if two people are editing the same file at the same time.
 You should **ALWAYS** work on a separate branch and later have your work merged via a pull requests when you're
 ready to combine your work.
 
-TODO
+To help prevent this from happening, you can modify your repository to not accept pushes to the main branch:
 
+1. Go to settings.
+2. Select Branches
+
+![Branches](support/branches.png)
+
+3. Under Branch Protection Rules, click `Add Rule`
+
+![Add Rule](support/addRule.png)
+
+4. Type `main` into the `Branch pattern`
+5. Select `Require a pull request before merging`
+
+![Main Branch Rule](support/main.png)
+
+6. Scroll to the bottom and select `Create`
+
+![Create](support/create.png)
+
+Congratulations! It is now not possible to push directly to the main branch.
 
 ### Creating a Branch
 
@@ -120,7 +139,7 @@ of your own work.
 
 5. Commit your change.
 
-6. Click Publish Changes
+6. Click Publish Changes. If you're asked, select `origin`.
 
 ![Publish Changes](support/publishChanges.png)
 
@@ -146,10 +165,59 @@ that GitHub provides. For now, we will create a Pull Request using GitHubs inter
 
 5. Select that you want to merge to `main` from `your-branch`
 
+6. Click `Create Pull Request`
+
+![Create Pull Request](support/createPR.png)
+
+7. Click Add Reviewer and add your group members to review your Pull Request
+   
+![Add Reviewer](support/addReviewer.png)
+
+8. Click `Create Pull Request`
+
+![Create PR2](support/createPullRequest.png)
+
+You're now ready for your group members to review your work!
+
 ### Merge a Pull Request
 
-Go to your group members pull request. Add a comment. Approve their pull
-request.
+Now, it is up to you to review your group members work and merge their work into
+the main branch. After everyone has created a Pull Request:
+
+1. Go to the Pull Requests tab
+2. Open one of your group members Pull Requests
+3. Click on `Files Changed`
+
+![Files Changed](support/fileschanged.png)
+
+This page shows all of the changes that the person made. You can add comments
+directly on each line of the changes. For this change, you're simply going to 
+add a simple review.
+
+4. Add a Review by clicking `Review Changes`
+
+![Review Changes](support/reviewChanges.png)
+
+5. Add a message, "Looks good to me!" or "lgtm!" for short. Select `Approve`. Then click `Submit Review`
+
+![lgmt](support/lgtm.png)
+
+Your review is now added to the Pull Request. This also, by approving the pull request, the `Merge` button
+is now green.   
+   
+6. Click `Merge Pull Request`. Then click `Confirm merge`
+   * If someone else merged before you, you will now have a conflict. This happens when multiple people modify the same line of a file like we did when adding in our author names. We will show how to resolve this in the next section.
+7. Do NOT click the `Delete Branch` button. For this project, you will continue to use your individual branches to make your changes.
+
+### Resolving Conflicts
+
+In the previous step, both group members modified the same file AND the same line. Normally, git is pretty good at
+merging changes to the same file as long as they are not on the same section of code. In this case, git needs a little
+help to resolve the conflict. The simplest way to resolve this is to merge the new main branch into your branch in VS Code.
+
+1. Open your project in VS Code
+2. Click the Source Control icon
+3. 
 
 ### Merging Main into your Branch
 
