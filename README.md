@@ -4,6 +4,13 @@ In this project, you will implement an interface for creating a Word Guessing
 game. Then, using that library, you will implement a Guessing Game called
 "Snowman" in Unity.
 
+This project will count as 2 grades: 
+
+* The first part, Milestone 1 and 2, will be completed in a group of 2 or 3
+  students. This will be your first grade.
+* The second part, Milestones 3, 4, and 5 must be completed individually. This
+  will be your second grade.
+
 - [Snowman](#snowman)
   - [Required Software](#required-software)
     - [.NET Core Test Explorer](#net-core-test-explorer)
@@ -377,7 +384,7 @@ This is where you will receive feedback from Mx. Collard.
 - [ ] Complete all TODOs on the design document
 
 For this milestone, you will complete the design document for a word guessing
-game library.
+game library. You must work in a group of 2 or 3 people for this milestone.
 
 ### Getting Started
 
@@ -411,7 +418,8 @@ and verify it is available online.
 * C Period Due: Thursday Nov 11th @ 11:59 PM
 
 For this milestone, you will implement the IWordGame interface using the
-flowcharts from Milestone 1.
+flowcharts from Milestone 1. You must work in a group of 2 or 3 people for this
+milestone.
 
 ### Task List
 
@@ -497,7 +505,6 @@ and verify it is available online.
 Setting up Unity Coming Soon!
 
 ## Milestone 4
-
 
 Complete the Snowman Game Coming Soon!
 
