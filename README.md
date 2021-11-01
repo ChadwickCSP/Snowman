@@ -216,12 +216,77 @@ merging changes to the same file as long as they are not on the same section of 
 help to resolve the conflict. The simplest way to resolve this is to merge the new main branch into your branch in VS Code.
 
 1. Open your project in VS Code
-2. Click the Source Control icon
-3. 
+
+First we need to get the latest version of the main branch.
+
+2. Click the branch icon in the bottom left of VS Code
+
+![Switch Branch](support/switchBranch.png)
+
+3. When prompted, select `main`
+
+4. Next to the `main` branch, you will see that it shows there are changes that need to be pulled (the number on the left). To `sync` your project, click this button.
+
+![Sync](support/sync.png)
+
+If prompted, click `Ok`. Your main branch is now synced!
+
+5. Switch back to your branch by clicking on the branch icon again and selecting your branch.
+
+6. Next, we will merge the changes from `main` to your branch. Go to the Source Control tab.
+
+![Source Control](support/sourcControl.png)
+
+7. Select the `...` menu > Branch > Merge Branch
+
+![Merge Main](support/mergeMain.png)
+
+8. When prompted select `main`
+
+You should see a Merge conflict open. For this conflict, we want to accept both changes.
+
+9. Select `Accept Both Changes`
+
+![Accept Both](support/acceptBoth.png)
+
+10. Save your file. Commit and Push
+
+11. Return to your Pull Request and finish the merge.
 
 ### Merging Main into your Branch
 
-TODO: Show how to merge main into branch
+Throughout your project, you should merge any changes from the main branch into your branch. This will keep it up
+to date with your group members:
+
+1. Open your project in VS Code
+
+First we need to get the latest version of the main branch.
+
+2. Click the branch icon in the bottom left of VS Code
+
+![Switch Branch](support/switchBranch.png)
+
+3. When prompted, select `main`
+
+4. Next to the `main` branch, you will see that it shows there are changes that need to be pulled (the number on the left). To `sync` your project, click this button.
+
+![Sync](support/sync.png)
+
+If prompted, click `Ok`. Your main branch is now synced!
+
+5. Switch back to your branch by clicking on the branch icon again and selecting your branch.
+
+6. Next, we will merge the changes from `main` to your branch. Go to the Source Control tab.
+
+![Source Control](support/sourcControl.png)
+
+7. Select the `...` menu > Branch > Merge Branch
+
+![Merge Main](support/mergeMain.png)
+
+8. When prompted select `main`
+
+9. If necessary, resolve any merge conflicts.
 
 ## Create a Feedback Pull Request
 
