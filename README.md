@@ -94,6 +94,9 @@ a conflict if two people are editing the same file at the same time.
 You should **ALWAYS** work on a separate branch and later have your work merged via a pull requests when you're
 ready to combine your work.
 
+TODO
+
+
 ### Creating a Branch
 
 For this project, each group member will have their own branch.
@@ -110,8 +113,10 @@ of your own work.
 ![Create Branch](support/createBranch.png)
 
 3. Your branch name should be the first part of your email address. For example, `jcollard`
+    * **Do not click Publish Changes yet!**
 
 4. Add your name to the `Authors` Section of the WordGuesser/README.md document.
+   * Note: Only add your individual name, do not add your entire teams name.
 
 5. Commit your change.
 
@@ -119,11 +124,27 @@ of your own work.
 
 ![Publish Changes](support/publishChanges.png)
 
-
-
 ### Create a Pull Request
 
-Create a pull request to the `main` branch. Add your group members a reviewer.
+At this point, your changes are local to your branch. That is, your name is not visible on any other branch.
+
+To combine work together using git, we perform a merge. Typically, this is done using a Pull Request. This is a feature
+that GitHub provides. For now, we will create a Pull Request using GitHubs interface (note: you can also do this directly in VS Code).
+
+1. Go to your group's project on GitHub.
+2. Click the `Pull Requests` tab
+
+![Pull Requests](support/PullRequests.png)
+
+3. Click `New Pull Request`
+
+![New Pull Request](support/newPR.png)
+
+4. Make sure the target repo on the left is your project.
+
+![Your Project](support/yourRepo.png)
+
+5. Select that you want to merge to `main` from `your-branch`
 
 ### Merge a Pull Request
 
