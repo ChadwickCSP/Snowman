@@ -4,6 +4,36 @@ In this project, you will implement an interface for creating a Word Guessing
 game. Then, using that library, you will implement a Guessing Game called
 "Snowman" in Unity.
 
+- [Snowman](#snowman)
+  - [Required Software](#required-software)
+    - [.NET Core Test Explorer](#net-core-test-explorer)
+    - [Markdown All in One](#markdown-all-in-one)
+    - [Unity 2020.3.21f / Unity Hub](#unity-2020321f--unity-hub)
+  - [Project Setup](#project-setup)
+    - [Fork Repository](#fork-repository)
+    - [Manage Access](#manage-access)
+    - [Clone Repository](#clone-repository)
+  - [Team work flow](#team-work-flow)
+    - [What is a Branch](#what-is-a-branch)
+    - [Disallow committing to main branch](#disallow-committing-to-main-branch)
+    - [Creating a Branch](#creating-a-branch)
+    - [Create a Pull Request](#create-a-pull-request)
+    - [Merge a Pull Request](#merge-a-pull-request)
+    - [Resolving Conflicts](#resolving-conflicts)
+    - [Merging Main into your Branch](#merging-main-into-your-branch)
+  - [Create a Feedback Pull Request](#create-a-feedback-pull-request)
+  - [Milestone 1](#milestone-1)
+    - [Task List](#task-list)
+    - [Getting Started](#getting-started)
+    - [Deliverable](#deliverable)
+  - [Milestone 2](#milestone-2)
+    - [Getting Started](#getting-started-1)
+    - [Testing Milestone 2](#testing-milestone-2)
+    - [Deliverable](#deliverable-1)
+  - [Milestone 3](#milestone-3)
+  - [Milestone 4](#milestone-4)
+  - [Milestone 5](#milestone-5)
+
 ## Required Software
 
 ### .NET Core Test Explorer
