@@ -32,42 +32,71 @@ Coming soon: A video on completing the Unity installation
 
 For previous projects, you have signed up for the project using GitHub
 classroom. This is not a normal work flow in the software development world. For
-this project, you will be creating what is called a "Fork" of this project. A
-forked repository allows you to easily collaborate with other people within the
-same codebase.
+this project, you will be creating a forked repository. A forked repository
+can be thought of a copy of the repository that contains the entire history
+of the project that can later be merged back together.
 
-TODO: More explanation?
+To start out, 1 member from your group should fork the main repository.
 
-1 member from your group should fork the repository.
-
-TODO: Add Fork Image
+![Fork](support/fork.png)
 
 ### Manage Access
 
-That member should add each group member to the repository.
+After the fork has been created. The member who forked it should update the repository
+so that each member of the group can access it.
 
 1. Click Settings
-2. Manage Access
-3. Add People
-4. Add jcollard as well as your other group members.
+
+![Settings](support/settings.png)
+
+2. Rename your repository to be `snowman-username1-username2-username3`.
+    * For example, Mx. Collard (jcollard) and Mr. DeVaughn-Brown (jd12) would rename their repository: `snowman-jcollard-jd12`
+
+![Rename](support/rename.png)
+
+3. Click Manage Access
+
+![Manage Access](support/manageAccess.png)
+
+4. Add People
+
+![Add People](support/addPeople.png)
+
+5. Add `jcollard` as well as your other group members. This will be their GitHub username.
+
+6. Each member will receive an email with the invitation that they will need to accept.
 
 ### Clone Repository
 
-Each person should now clone the project to their computer.
+Each person should now clone the repository to their computer. The name of the repository will
+be prefixed with the username of the member who forked the repository. For example, Mx. Collard's fork
+is called `jcollard/snowman-jcollard`.
 
-TODO: Add images
+![Clone](support/clone.png)
 
 ## Team work flow
 
-Never commit to the main branch! This can cause problems for your entire team.
-You should *ALWAYS* work on a new branch and create pull requests when you're
-ready to combine your work.
+For the first two milestones of this project, you and your group members will be working on the project
+simultaneously. This can cause issues if you are modifying the same files at the same time. Git is a powerful
+collaboration tool that attempts to make this easier.
+
+### What is a Branch
+
+A branch is a copy of the repository that allows for code to be edited in isolation, tested, and then either
+combined or discarded depending on the results. 
 
 ### Disallow committing to main branch
 
-Update settings to disallow committing to the main branch.
+Never commit to the main branch! The main branch should always contain the most recent, agreed upon project.
+Committing directly to the main branch can cause major issues for your whole team. The most common iss
+a conflict if two people are editing the same file at the same time.
+
+You should **ALWAYS** work on a separate branch and later have your work merged via a pull requests when you're
+ready to combine your work.
 
 ### Creating a Branch
+
+For this project, each group member will have their own branch.
 
 Create a branch that matches your name. This is the branch where you will do all
 of your own work.
