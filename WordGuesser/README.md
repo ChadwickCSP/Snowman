@@ -5,6 +5,7 @@ The WordGuesser class defines a word guessing game.
 ## Authors
 
 Zoe Stephens 
+Kailey Freedman
 Gretchen Deutsch 
 
 ## Member Variables
