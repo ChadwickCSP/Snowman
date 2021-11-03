@@ -11,7 +11,7 @@
         /// <summary>
         /// This is the Entry Point for the Word Guessing Game.
         /// </summary>
-        public static void Main()
+        public static void Play()
         {
             // WordSelector selector = new WordSelector("words.txt");
             List<string> dictionary = new List<string>();
