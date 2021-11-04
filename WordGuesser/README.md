@@ -91,7 +91,7 @@ and updating the game state as necessary.
 8. If the letter is correct and appears multiple times, returns "There are
    {count} {guess}s".
 
-TODO: Add Image of flowchart
+![Image](CheckGuessstring_guess.png)
 
 ### CountLetter(char guess)
 
@@ -118,4 +118,4 @@ Returns the word that is to be guessed without any missing letters.
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
 
-TODO: Add Image of flowchart
+![Image](getword.png)
