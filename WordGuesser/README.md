@@ -106,6 +106,7 @@ Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
 ![Get Guessed Letter Flowchart](../diagrams/GetGuessedLetters().png)
+
 ### GetFullWord()
 
 Returns the word that is to be guessed without any missing letters.
