@@ -106,7 +106,7 @@ TODO: Add Image of flowchart
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-TODO: Add Image of flowchart
+![ Get Guessed Letters ](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
