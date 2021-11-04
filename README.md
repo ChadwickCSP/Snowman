@@ -393,6 +393,11 @@ simple to complete. For a group of 2 people, I recommend completing the diagrams
 in `WordGamePart1` together. Then, dividing the work up for each person to
 complete one of `WordGamePart2` or `WordGamePart3`.
 
+A `StringAnalyzer` class with 4 methods has been provided to help you think through
+these methods. This class is located in `WordGuesser/src/Examples/StringAnalyzer.cs`.
+Additionally, a design document with flowcharts of the 4 methods has been provided
+here: [String Analyzer](WordGuesser/src/Examples/README.md)
+
 When you're finished, you should export the completed flowcharts as PNGs and add
 them to the `WordGuesser/README.md` file.
 
