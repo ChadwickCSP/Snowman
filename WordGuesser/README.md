@@ -98,7 +98,7 @@ TODO: Add Image of flowchart
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-TODO: Add Image of flowchart
+![Count Letter Flowchart](../diagrams/CountLetter(char%20guess).png)
 
 ### GetGuessedLetters()
 
