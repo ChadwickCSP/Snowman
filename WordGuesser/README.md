@@ -98,14 +98,14 @@ and updating the game state as necessary.
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-TODO: Add Image of flowchart
+![Image]()
 
 ### GetGuessedLetters()
 
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-TODO: Add Image of flowchart
+![Image](getguessedletters.png)
 
 ### GetFullWord()
 
