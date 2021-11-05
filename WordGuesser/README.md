@@ -63,7 +63,7 @@ TODO: Add Image of flowchart
 
 This method returns the number of incorrect guesses that have been made.
 
-
+![Incorrect Guess Flowchart](../diagrams/GetIncorrectGuesses().png)
 
 ### GetGuessLimit()
 
@@ -107,7 +107,7 @@ Screen Shot 2021-11-04 at 7.21.08 PM
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-TODO: Add Image of flowchart
+![Get Guess Letter Flowchart](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
