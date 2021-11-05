@@ -63,7 +63,7 @@ TODO: Add Image of flowchart
 
 This method returns the number of incorrect guesses that have been made.
 
-TODO: Add Image of flowchart
+
 
 ### GetGuessLimit()
 
