@@ -107,7 +107,7 @@ Algorithm:
    * If it is the guess, increment the count.
 5. After checking every letter, return the count.
 
-TODO: Add Image of flowchart
+![CountLetter(char guess) Flowchart](diagrams/CountLetter(char_guess).png)
 
 ### GetGuessedLetters()
 
@@ -121,7 +121,7 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-TODO: Add Image of flowchart
+![GetGuessedLetters() Flowchart](diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
