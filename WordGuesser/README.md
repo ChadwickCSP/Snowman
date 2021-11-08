@@ -63,7 +63,7 @@ TODO: Add Image of flowchart
 
 This method returns the number of incorrect guesses that have been made.
 
-TODO: Add Image of flowchart
+![Incorrect Guess Flowchart](../diagrams/GetIncorrectGuesses().png)
 
 ### GetGuessLimit()
 
@@ -99,6 +99,8 @@ TODO: Add Image of flowchart
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
+Screen Shot 2021-11-04 at 7.21.08 PM
+![CountletterFlowchart](counntletterchar_guess.png)
 Algorithm:
 
 1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
@@ -115,6 +117,7 @@ TODO: Add Image of flowchart
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
+![Get Guess Letter Flowchart](../diagrams/GetGuessedLetters().png)
 Algorithm:
 
 1. Create an empty string that will accumulate the letters that have been guessed.
@@ -142,5 +145,7 @@ Algorithm:
    * If the letter has been guessed (this.guessedLetters.Contains(c)), append the letter to the string
    * If the letter has not been guessed (else), append an underscore to the string
 3. Trim the string and return it.
+$$
 
+$$
 TODO: Add Image of flowchart
