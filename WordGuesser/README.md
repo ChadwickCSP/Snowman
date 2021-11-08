@@ -106,7 +106,7 @@ guessed. The case of the letter specified is ignored.
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-TODO: Add Image of flowchart
+![Get Guessed Letters Flowchart](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
@@ -119,4 +119,4 @@ TODO: Add Image of flowchart
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
 
-TODO: Add Image of flowchart
+![Get Word Flowchart](../diagrams/GetWord().png)
