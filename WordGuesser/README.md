@@ -119,4 +119,4 @@ Returns the word that is to be guessed without any missing letters.
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
 
-TODO: Add Image of flowchart
+![Get Word](../diagrams/GetWord().png)
