@@ -4,7 +4,8 @@ The WordGuesser class defines a word guessing game.
 
 ## Authors
 
-TODO: Add your names here
+Derek Linden
+Alex Xie
 
 ## Member Variables
 
