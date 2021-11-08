@@ -52,14 +52,15 @@ the number of incorrect guesses that are allowed.
 This method checks if the game has been won. A game is considered won if all of
 the letters in the word to be guessed have been guessed.
 
-TODO
+![Is Game Won Flowchart](/diagrams/IsGameWon.png)
 
 ### IsGameOver()
 
 This method checks if the game has been lost. A game is considered lost if the
 number of incorrect guesses is greater than or equal to the guess limit.
 
-TODO
+![Is Game Over Flowchart](/diagrams/IsGameOver.png)
+
 
 ### GetIncorrectGuesses()
 
