@@ -121,7 +121,7 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-TODO: Add Image of flowchart
+![Get Guessed Letter Flowchart](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
