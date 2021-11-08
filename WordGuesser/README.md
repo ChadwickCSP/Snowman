@@ -49,27 +49,27 @@ the number of incorrect guesses that are allowed.
 This method checks if the game has been won. A game is considered won if all of
 the letters in the word to be guessed have been guessed.
 
-TODO: Add Image of flowchart
+![IsGameWon](../diagrams/igw.png)
 
 ### IsGameOver()
 
 This method checks if the game has been lost. A game is considered lost if the
 number of incorrect guesses is greater than or equal to the guess limit.
 
-TODO: Add Image of flowchart
+![IsGameOver](../diagrams/igo.png)
 
 ### GetIncorrectGuesses()
 
 This method returns the number of incorrect guesses that have been made.
 
-TODO: Add Image of flowchart
+![GetIncorrectGuesses](../diagrams/gig.png)
 
 ### GetGuessLimit()
 
 This method returns the number of incorrect guesses that can be made before the
 game is over.
 
-TODO: Add Image of flowchart
+![GetGuessLimit](../diagrams/ggl.png)
 
 ### CheckGuess(string guess)
 
@@ -123,7 +123,7 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-![GetGuess](ggl.png)
+![GetGuess](../diagrams/GetGuessLetter.png)
 
 ### GetFullWord()
 
