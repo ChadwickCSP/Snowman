@@ -9,7 +9,10 @@ Alex Xie
 
 ## Member Variables
 
-TODO: List your member variables here
+* guessedLetters - This is a list of all the letters the player guessed.
+* incorrectGuesses - This is an int of all the incorrect guesses the player had.
+* guessLimit - This is an int of the maximum guesses a player has.
+* fullWord - This is a string of the word the player will try to guess.
 
 ## Constructors
 
@@ -49,27 +52,27 @@ the number of incorrect guesses that are allowed.
 This method checks if the game has been won. A game is considered won if all of
 the letters in the word to be guessed have been guessed.
 
-TODO: Add Image of flowchart
+TODO
 
 ### IsGameOver()
 
 This method checks if the game has been lost. A game is considered lost if the
 number of incorrect guesses is greater than or equal to the guess limit.
 
-TODO: Add Image of flowchart
+TODO
 
 ### GetIncorrectGuesses()
 
 This method returns the number of incorrect guesses that have been made.
 
-TODO: Add Image of flowchart
+![Get Incorrect Guesses Flowchart](/diagrams/GetIncorrectGuesses.png)
 
 ### GetGuessLimit()
 
 This method returns the number of incorrect guesses that can be made before the
 game is over.
 
-TODO: Add Image of flowchart
+![Get Guess Limit Flowchart](/diagrams/GetGuessLimit.png)
 
 ### CheckGuess(string guess)
 
@@ -91,7 +94,7 @@ and updating the game state as necessary.
 8. If the letter is correct and appears multiple times, returns "There are
    {count} {guess}s".
 
-TODO: Add Image of flowchart
+![Check Guess Flowchart](/diagrams/CheckGuess.png)
 
 ### CountLetter(char guess)
 
@@ -107,7 +110,7 @@ Algorithm:
    * If it is the guess, increment the count.
 5. After checking every letter, return the count.
 
-TODO: Add Image of flowchart
+![Count Letter Flowchart](/diagrams/CountLetter.png)
 
 ### GetGuessedLetters()
 
@@ -121,13 +124,13 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-TODO: Add Image of flowchart
+![Get Guessed Letters Flowchart](/diagrams/GetGuessedLetters.png)
 
 ### GetFullWord()
 
 Returns the word that is to be guessed without any missing letters.
 
-TODO: Add Image of flowchart
+![Get Full Word Flowchart](/diagrams/GetFullWord.png)
 
 ### GetWord()
 
@@ -142,4 +145,4 @@ Algorithm:
    * If the letter has not been guessed (else), append an underscore to the string
 3. Trim the string and return it.
 
-TODO: Add Image of flowchart
+![Get Word Flowchart](/diagrams/GetWord.png)
