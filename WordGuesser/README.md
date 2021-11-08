@@ -128,7 +128,7 @@ Algorithm:
 
 Returns the word that is to be guessed without any missing letters.
 
-
+![Get Full Word Flowchart](../diagrams/GetFullWord().png)
 ### GetWord()
 
 Returns the word that is to be guessed with each letter that has not yet been
