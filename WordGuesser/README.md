@@ -9,7 +9,10 @@ Daniel Rosenzweig
 
 ## Member Variables
 
-TODO: List your member variables here
+List<char> lettersGuessed;
+int incorrectGuesses;
+int guessLimit;
+string fullWord;
 
 ## Constructors
 
