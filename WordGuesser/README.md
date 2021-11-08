@@ -133,6 +133,7 @@ Algorithm:
 ### GetFullWord()
 
 Returns the word that is to be guessed without any missing letters.
+![GetFullWord](../diagrams/gfw.png)
 
 
 ### GetWord()
