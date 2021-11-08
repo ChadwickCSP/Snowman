@@ -98,12 +98,30 @@ TODO: Add Image of flowchart
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
+Algorithm:
+
+1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
+2. Sanitize the `guess` character by making it uppercase.
+3. Initialize an integer to count the number of appearances.
+4. Iterate through every character in the word being guessed.
+   * If it is the guess, increment the count.
+5. After checking every letter, return the count. 
+
 ![Count Letter Flowchart](../diagrams/CountLetter(char%20guess).png)
+
+
 
 ### GetGuessedLetters()
 
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
+
+Algorithm:
+
+1. Create an empty string that will accumulate the letters that have been guessed.
+2. Iterate through every character that has been guessed
+   * Append the character to the string
+3. Trim the string and return it
 
 TODO: Add Image of flowchart
 
@@ -117,5 +135,13 @@ TODO: Add Image of flowchart
 
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
+
+Algorithm:
+
+1. Create an empty string that will accumulate the word to be displayed.
+2. Iterate through every character in the word to be guessed
+   * If the letter has been guessed (this.guessedLetters.Contains(c)), append the letter to the string
+   * If the letter has not been guessed (else), append an underscore to the string
+3. Trim the string and return it.
 
 TODO: Add Image of flowchart
