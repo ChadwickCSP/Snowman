@@ -27,7 +27,7 @@ the number of incorrect guesses that are allowed.
         {
             if (guessLimit <= 0)
             {
-                throw new ArgumentException($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
+                throw new ArgumentExcept`ion($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
             }
 
             foreach (char c in wordToGuess)
@@ -91,32 +91,30 @@ and updating the game state as necessary.
 8. If the letter is correct and appears multiple times, returns "There are
    {count} {guess}s".
 
-TODO: Add Image of flowchart
+![check guess](../diagrams/checkguessstring_guess.png)
 
 ### CountLetter(char guess)
 
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-![Count Letter Flowchart](../diagrams/countletterchar_guess.png)
-
+![count letter](../diagrams/countletterchar_guess.png)
 ### GetGuessedLetters()
 
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-TODO: Add Image of flowchart
-![Count Letter Flowchart](/diagrams/getguessedletters.png)
+![get guessed letter](../diagrams/getguessedletters.png)
+
 
 ### GetFullWord()
 
 Returns the word that is to be guessed without any missing letters.
 
-TODO: Add Image of flowchart
 
 ### GetWord()
 
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
 
-TODO: Add Image of flowchart
+![get word](../diagrams/getword.png)
