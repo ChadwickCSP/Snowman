@@ -82,7 +82,7 @@ and updating the game state as necessary.
    guess a single letter".
 3. If the character is not a letter, returns "You can only guess letters"
 4. If the letter guessed has been previously guessed, returns "You've already
-   guessed {guess}"
+   guessed {guess}"  
 5. If the letter has not been previously guessed, it is added to the list of
    guessed letters.
 6. If the letter is not part of the word to be guessed, the number of incorrect
@@ -106,6 +106,7 @@ Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
 TODO: Add Image of flowchart
+![Count Letter Flowchart](/diagrams/getguessedletters.png)
 
 ### GetFullWord()
 
