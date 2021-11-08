@@ -70,7 +70,7 @@ This method returns the number of incorrect guesses that have been made.
 This method returns the number of incorrect guesses that can be made before the
 game is over.
 
-TODO: Add Image of flowchart
+![GetGuessLimitFlowchart](../diagrams/GetGuessLimit().png)
 
 ### CheckGuess(string guess)
 
@@ -131,7 +131,7 @@ TODO: Add Image of flowchart
 
 Returns the word that is to be guessed without any missing letters.
 
-TODO: Add Image of flowchart
+![GetFullWordFlowchart](../diagrams/GetFullWord().png)
 
 ### GetWord()
 
