@@ -145,7 +145,6 @@ Algorithm:
    * If the letter has been guessed (this.guessedLetters.Contains(c)), append the letter to the string
    * If the letter has not been guessed (else), append an underscore to the string
 3. Trim the string and return it.
-$$
 
-$$
-TODO: Add Image of flowchart
+
+![GetWord Flowchart](../diagrams/GetWord().png)
