@@ -27,7 +27,7 @@ the number of incorrect guesses that are allowed.
         {
             if (guessLimit <= 0)
             {
-                throw new ArgumentException($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
+                throw new ArgumentExcept`ion($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
             }
 
             foreach (char c in wordToGuess)
@@ -82,7 +82,7 @@ and updating the game state as necessary.
    guess a single letter".
 3. If the character is not a letter, returns "You can only guess letters"
 4. If the letter guessed has been previously guessed, returns "You've already
-   guessed {guess}"
+   guessed {guess}"  
 5. If the letter has not been previously guessed, it is added to the list of
    guessed letters.
 6. If the letter is not part of the word to be guessed, the number of incorrect
@@ -91,55 +91,30 @@ and updating the game state as necessary.
 8. If the letter is correct and appears multiple times, returns "There are
    {count} {guess}s".
 
-TODO: Add Image of flowchart
+![check guess](../diagrams/checkguessstring_guess.png)
 
 ### CountLetter(char guess)
 
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-Algorithm:
-
-1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
-2. Sanitize the `guess` character by making it uppercase.
-3. Initialize an integer to count the number of appearances.
-4. Iterate through every character in the word being guessed.
-   * If it is the guess, increment the count.
-5. After checking every letter, return the count.
-
-TODO: Add Image of flowchart
-
+![count letter](../diagrams/countletterchar_guess.png)
 ### GetGuessedLetters()
 
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-Algorithm:
+![get guessed letter](../diagrams/getguessedletters.png)
 
-1. Create an empty string that will accumulate the letters that have been guessed.
-2. Iterate through every character that has been guessed
-   * Append the character to the string
-3. Trim the string and return it
-
-TODO: Add Image of flowchart
 
 ### GetFullWord()
 
 Returns the word that is to be guessed without any missing letters.
 
-TODO: Add Image of flowchart
 
 ### GetWord()
 
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
 
-Algorithm:
-
-1. Create an empty string that will accumulate the word to be displayed.
-2. Iterate through every character in the word to be guessed
-   * If the letter has been guessed (this.guessedLetters.Contains(c)), append the letter to the string
-   * If the letter has not been guessed (else), append an underscore to the string
-3. Trim the string and return it.
-
-TODO: Add Image of flowchart
+![get word](../diagrams/getword.png)
