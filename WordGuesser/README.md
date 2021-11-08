@@ -92,7 +92,8 @@ and updating the game state as necessary.
 8. If the letter is correct and appears multiple times, returns "There are
    {count} {guess}s".
 
-TODO: Add Image of flowchart
+![checkguess](../diagrams/CheckGuess(string%20guess);.png)
+
 
 ### CountLetter(char guess)
 
@@ -143,4 +144,4 @@ Algorithm:
    * If the letter has not been guessed (else), append an underscore to the string
 3. Trim the string and return it.
 
-TODO: Add Image of flowchart
+![getword](../diagrams/GetWord().png)
