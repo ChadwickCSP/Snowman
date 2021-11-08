@@ -98,7 +98,6 @@ and updating the game state as necessary.
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-![Count Letter Flowchart](../diagrams/CountLetter(char%20guess).png)
 Algorithm:
 
 1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
@@ -108,7 +107,7 @@ Algorithm:
    * If it is the guess, increment the count.
 5. After checking every letter, return the count.
 
-TODO: Add Image of flowchart
+![Count Letter Flowchart](../diagrams/CountLetter(char%20guess).png)
 
 ### GetGuessedLetters()
 
