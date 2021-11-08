@@ -100,7 +100,7 @@ Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
 Screen Shot 2021-11-04 at 7.21.08 PM
-![CountletterFlowchart](counntletterchar_guess.png)
+![CountletterFlowchart](src/WordGame/FlowchartImages/countletterchar_guess.png)
 Algorithm:
 
 1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
