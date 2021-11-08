@@ -4,7 +4,9 @@ The WordGuesser class defines a word guessing game.
 
 ## Authors
 
-TODO: Add your names here
+Austin Keesey
+Brooklin Laird
+Micah Breaux
 
 ## Member Variables
 
@@ -107,6 +109,8 @@ Algorithm:
 5. After checking every letter, return the count.
 
 TODO: Add Image of flowchart
+![CountLetter](../diagrams/CountLetter(char%20guess).png)
+
 
 ### GetGuessedLetters()
 
@@ -121,6 +125,7 @@ Algorithm:
 3. Trim the string and return it
 
 TODO: Add Image of flowchart
+![GetGuessedLetters](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
