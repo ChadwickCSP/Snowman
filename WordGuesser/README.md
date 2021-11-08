@@ -115,7 +115,6 @@ Algorithm:
 Returns a string containing each letter that has been guessed in the order that
 they were guessed.
 
-![ Get Guessed Letters ](../diagrams/GetGuessedLetters().png)
 Algorithm:
 
 1. Create an empty string that will accumulate the letters that have been guessed.
@@ -123,7 +122,8 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-TODO: Add Image of flowchart
+![ Get Guessed Letters ](../diagrams/GetGuessedLetters().png)
+
 
 ### GetFullWord()
 
@@ -136,7 +136,6 @@ Returns the word that is to be guessed without any missing letters.
 Returns the word that is to be guessed with each letter that has not yet been
 guessed replaced with an underscore.
 
-![Get Word](../diagrams/GetWord().png)
 Algorithm:
 
 1. Create an empty string that will accumulate the word to be displayed.
@@ -145,4 +144,4 @@ Algorithm:
    * If the letter has not been guessed (else), append an underscore to the string
 3. Trim the string and return it.
 
-TODO: Add Image of flowchart
+![Get Word](../diagrams/GetWord().png)
