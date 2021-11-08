@@ -92,7 +92,7 @@ and updating the game state as necessary.
 8. If the letter is correct and appears multiple times, returns "There are
    {count} {guess}s".
 
-TODO: Add Image of flowchart
+![CheckGuessFlowchart](../diagrams/SusanCheckGuess(string%20guess);.png)
 
 ### CountLetter(char guess)
 
