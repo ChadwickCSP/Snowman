@@ -56,8 +56,7 @@ TODO: Add Image of flowchart
 This method checks if the game has been lost. A game is considered lost if the
 number of incorrect guesses is greater than or equal to the guess limit.
 
-TODO: Add Image of flowchart
-
+![Is Game Over]((../diagrams/IsGameOver().png))
 ### GetIncorrectGuesses()
 
 This method returns the number of incorrect guesses that have been made.
