@@ -129,7 +129,7 @@ Algorithm:
 
 Returns the word that is to be guessed without any missing letters.
 
-TODO: Add Image of flowchart
+![GetFullWord](../diagrams/gfw.png)
 
 ### GetWord()
 
