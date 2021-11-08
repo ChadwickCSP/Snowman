@@ -50,27 +50,27 @@ the number of incorrect guesses that are allowed.
 This method checks if the game has been won. A game is considered won if all of
 the letters in the word to be guessed have been guessed.
 
-[Isgamewon](../diagrams/IsGameWon().png)
+![Isgamewon](../diagrams/IsGameWon().png)
 
 ### IsGameOver()qq
 
 This method checks if the game has been lost. A game is considered lost if the
 number of incorrect guesses is greater than or equal to the guess limit.
 
-[isgameover](../diagrams/IsGameOver().png)
+![isgameover](../diagrams/IsGameOver().png)
 
 ### GetIncorrectGuesses()
 
 This method returns the number of incorrect guesses that have been made.
 
-[getincorrectguesses](../support/getincorrectguesses.png)
+![getincorrectguesses](../support/getincorrectguesses.png)
 
 ### GetGuessLimit()
 
 This method returns the number of incorrect guesses that can be made before the
 game is over.
 
-[getguesslimit](../diagrams/GetGuessLimit().png)
+![getguesslimit](../diagrams/GetGuessLimit().png)
 
 ### CheckGuess(string guess)
 
