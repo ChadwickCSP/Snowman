@@ -9,7 +9,10 @@ Kory Jackson
 
 ## Member Variables
 
-TODO: List your member variables here
+List<char>guessedLetters;
+string wordToGuess;
+int guessLimit;
+int incorrectGuessCount;
 
 ## Constructors
 
@@ -98,7 +101,6 @@ and updating the game state as necessary.
 Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
-![Count Letter Flowchart](../diagrams/CountLetter(char%20guess).png)
 Algorithm:
 
 1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
@@ -108,7 +110,7 @@ Algorithm:
    * If it is the guess, increment the count.
 5. After checking every letter, return the count.
 
-TODO: Add Image of flowchart
+![Count Letter Flowchart](../diagrams/CountLetter(char%20guess).png)
 
 ### GetGuessedLetters()
 
@@ -122,7 +124,7 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-TODO: Add Image of flowchart
+![Get Guessed Letters](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
@@ -143,4 +145,4 @@ Algorithm:
    * If the letter has not been guessed (else), append an underscore to the string
 3. Trim the string and return it.
 
-TODO: Add Image of flowchart
+![Get Word](../diagrams/GetWord().png)
