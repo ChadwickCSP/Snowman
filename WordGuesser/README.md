@@ -9,7 +9,7 @@ Kory Jackson
 
 ## Member Variables
 
-List<char> guessedLetters;
+List<char>guessedLetters;
 string wordToGuess;
 int guessLimit;
 int incorrectGuessCount;
