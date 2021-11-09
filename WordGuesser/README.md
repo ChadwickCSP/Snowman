@@ -9,7 +9,10 @@ Kory Jackson
 
 ## Member Variables
 
-TODO: List your member variables here
+List<char>guessedLetters;
+string wordToGuess;
+int guessLimit;
+int incorrectGuessCount;
 
 ## Constructors
 
