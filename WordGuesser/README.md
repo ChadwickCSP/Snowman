@@ -9,7 +9,10 @@ Kory Jackson
 
 ## Member Variables
 
-TODO: List your member variables here
+List<char> guessedLetters;
+string wordToGuess;
+int guessLimit;
+int incorrectGuessCount;
 
 ## Constructors
 
@@ -121,7 +124,7 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-TODO: Add Image of flowchart
+![Get Guessed Letters](../diagrams/GetGuessedLetters().png)
 
 ### GetFullWord()
 
@@ -142,4 +145,4 @@ Algorithm:
    * If the letter has not been guessed (else), append an underscore to the string
 3. Trim the string and return it.
 
-TODO: Add Image of flowchart
+![Get Word](../diagrams/GetWord().png)
