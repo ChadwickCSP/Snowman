@@ -36,46 +36,56 @@ namespace WordGuesser
         public string CheckGuess(string guess)
         {
             throw new System.NotImplementedException();
+            //Janet
         }
 
         public int CountLetter(char guess)
         {
             throw new System.NotImplementedException();
+            //Lucia
         }
 
         public string GetFullWord()
         {
             throw new System.NotImplementedException();
+            //Janet
         }
 
         public string GetGuessedLetters()
         {
             throw new System.NotImplementedException();
+            //Lucia
         }
 
         public int GetGuessLimit()
         {
             throw new System.NotImplementedException();
+            //Janet
         }
 
         public int GetIncorrectGuesses()
         {
             throw new System.NotImplementedException();
+            //Lucia
         }
 
         public string GetWord()
         {
             throw new System.NotImplementedException();
+            //Janet
         }
 
         public bool IsGameOver()
         {
             throw new System.NotImplementedException();
+            //Lucia
+
         }
 
         public bool IsGameWon()
         {
             throw new System.NotImplementedException();
+            //Janet
         }
     }
 }
