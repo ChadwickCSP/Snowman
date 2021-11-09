@@ -15,7 +15,7 @@ namespace WordGuesser
         {
             if (guessLimit <= 0)
             {
-                throw new ArgumentExcept($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
+                throw new ArgumentException($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
             }
 
             foreach (char c in wordToGuess)
@@ -76,26 +76,6 @@ namespace WordGuesser
         public bool IsGameWon()
         {
             throw new System.NotImplementedException();
-        }
-    }
-
-    [Serializable]
-    internal class ArgumentExcept : Exception
-    {
-        public ArgumentExcept()
-        {
-        }
-
-        public ArgumentExcept(string message) : base(message)
-        {
-        }
-
-        public ArgumentExcept(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected ArgumentExcept(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
         }
     }
 }
