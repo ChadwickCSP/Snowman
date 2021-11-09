@@ -9,7 +9,10 @@ Becket Wren
 
 ## Member Variables
 
-TODO: List your member variables here
+int guessLimit;
+string wordToGuess;
+int incorrectGuessCount;
+List<char> guessedLetters;
 
 ## Constructors
 
