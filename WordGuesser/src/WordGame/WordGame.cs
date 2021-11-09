@@ -26,12 +26,22 @@ namespace WordGuesser
                 }
             }
 
+<<<<<<< HEAD
             // TODO: Initialize member variables
+=======
+            // TODO: Initialize member variables 
+>>>>>>> origin/zstephens
             this.fullWord = wordToGuess;
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.lettersGuessed = new List<char>();
+<<<<<<< HEAD
         }
+=======
+
+        }
+
+>>>>>>> origin/zstephens
         public string CheckGuess(string guess)
         {
             throw new System.NotImplementedException();
