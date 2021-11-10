@@ -1,16 +1,36 @@
 namespace WordGuesser
 {
+    using System;
+    using System.Collections.Generic;
 
     public class WordGame : IWordGame
     {
 
         private string fullWord;
+        private int guessLimit;
+        private int incorrectGuesses;
+        private List<char> guesses;
 
         public WordGame(string wordToGuess, int guessLimit)
         {
-            this.fullWord = wordToGuess.ToUpper();
-        }
+            if (guessLimit <= 0)
+            {
+                throw new ArgumentException($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
+            }
 
+            foreach (char c in wordToGuess)
+            {
+                if (char.IsLetter(c) == false)
+                {
+                    throw new ArgumentException($"Illegal word '{wordToGuess}'. The word must contain only letters.");
+                }
+            }
+
+            this.fullWord = wordToGuess.ToUpper();
+            this.guessLimit = guessLimit;
+            this.incorrectGuesses = 0;
+            this.guesses = new List<char>();
+        }
 
         public string CheckGuess(string guess)
         {
@@ -19,7 +39,7 @@ namespace WordGuesser
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+            return 
         }
 
         public string GetFullWord()
@@ -29,17 +49,17 @@ namespace WordGuesser
 
         public string GetGuessedLetters()
         {
-            throw new System.NotImplementedException();
+            return this.List<char>();
         }
 
         public int GetGuessLimit()
         {
-            throw new System.NotImplementedException();
+            return this.guessLimit;
         }
 
         public int GetIncorrectGuesses()
         {
-            throw new System.NotImplementedException();
+            return this.incorrectGuesses;
         }
 
         public string GetWord()
