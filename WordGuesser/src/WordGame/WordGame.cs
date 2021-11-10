@@ -31,6 +31,7 @@ namespace WordGuesser
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.guesses = new List<char>();
+            this.guessedLetters = new List<char>();
         }
 
         public string CheckGuess(string guess)
@@ -77,12 +78,12 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if this.guessedLetters.Contains(c) = false
+                if (this.guessedLetters.Contains(c) = true)
                 {
-                    return bool false;
+                    return false;
                 }
+                return true;
             }
-            return bool true;
         }
     }
 
