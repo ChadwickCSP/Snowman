@@ -50,14 +50,14 @@ the number of incorrect guesses that are allowed.
 This method checks if the game has been won. A game is considered won if all of
 the letters in the word to be guessed have been guessed.
 
-TODO: Add Image of flowchart
+![IsGameWonFlowchart](../diagrams/SusanIsGameWon().png)
 
 ### IsGameOver()
 
 This method checks if the game has been lost. A game is considered lost if the
 number of incorrect guesses is greater than or equal to the guess limit.
 
-TODO: Add Image of flowchart
+![IsGameOverFlowchart](../diagrams/SusanIsGameOver().png)
 
 ### GetIncorrectGuesses()
 
@@ -70,7 +70,7 @@ This method returns the number of incorrect guesses that have been made.
 This method returns the number of incorrect guesses that can be made before the
 game is over.
 
-TODO: Add Image of flowchart
+![GetGuessLimitFlowchart](../diagrams/GetGuessLimit().png)
 
 ### CheckGuess(string guess)
 
@@ -100,7 +100,7 @@ Counts the number of times the specified character appears in the word to be
 guessed. The case of the letter specified is ignored.
 
 Screen Shot 2021-11-04 at 7.21.08 PM
-![CountletterFlowchart](counntletterchar_guess.png)
+![CountletterFlowchart](src/WordGame/FlowchartImages/countletterchar_guess.png)
 Algorithm:
 
 1. Check that `guess` is a letter. If it is not a letter, throw an `ArgumentException`.
@@ -125,13 +125,12 @@ Algorithm:
    * Append the character to the string
 3. Trim the string and return it
 
-TODO: Add Image of flowchart
 
 ### GetFullWord()
 
 Returns the word that is to be guessed without any missing letters.
 
-TODO: Add Image of flowchart
+![GetFullWordFlowchart](../diagrams/GetFullWord().png)
 
 ### GetWord()
 
