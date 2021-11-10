@@ -35,11 +35,21 @@ namespace WordGuesser
 
         public string CheckGuess(string guess)
         {
+            if (guess = AttributeTargetsfullWord)
+            {
+                return "Your Guess is correct.";
+            }
+            else
+            {
+                return "Your Guess is incorrect.";
+            }
+
             throw new System.NotImplementedException();
         }
 
         public int CountLetter(char guess)
         {
+            if (guess = i)
             throw new System.NotImplementedException();
         }
 
