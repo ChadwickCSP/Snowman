@@ -77,8 +77,12 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if this.guessedLetters.Contains(c)
+                if this.guessedLetters.Contains(c) = false
+                {
+                    return bool false;
+                }
             }
+            return bool true;
         }
     }
 
