@@ -15,7 +15,7 @@ namespace WordGuesser
         {
             if (guessLimit <= 0)
             {
-                throw new ArgumentExcept($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
+                throw new ArgumentException($"Illegal guessLimit '{guessLimit}'. The guess limit must be greater than 0.");
             }
 
             foreach (char c in wordToGuess)
@@ -27,7 +27,7 @@ namespace WordGuesser
             }
 
             // TODO: Initialize member variables
-            this.fullWord = wordToGuess;
+            this.fullWord = wordToGuess.ToUpper();
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.lettersGuessed = new List<char>();
@@ -35,22 +35,29 @@ namespace WordGuesser
 
         public string CheckGuess(string guess)
         {
-            if (guess = AttributeTargetsfullWord)
-            {
-                return "Your Guess is correct.";
-            }
-            else
-            {
-                return "Your Guess is incorrect.";
-            }
-
             throw new System.NotImplementedException();
         }
 
         public int CountLetter(char guess)
         {
-            if (guess = i)
-            throw new System.NotImplementedException();
+                if (!char.IsLetter(guess))
+                {
+                    throw new ArgumentException($"Invalid Character {guess}.");
+                }
+                else
+                {
+                    guess = char.ToUpper(guess);
+                    int count;
+                    count = 0;
+                    foreach (char c in this.fullWord)
+                    {
+                        if (c == guess)
+                        {
+                            count++;
+                        }
+                    }
+                    return count;
+                }
         }
 
         public string GetFullWord()
@@ -65,7 +72,7 @@ namespace WordGuesser
 
         public int GetGuessLimit()
         {
-            throw new System.NotImplementedException();
+            return this.guessLimit;
         }
 
         public int GetIncorrectGuesses()
@@ -80,32 +87,22 @@ namespace WordGuesser
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return this.incorrectGuesses >= this.guessLimit;
         }
 
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
+            foreach (char c in this.fullWord)
+            {
+               if (this.lettersGuessed.Contains(c))
+               {
+                   return false;
+               }
+            }
+
+            return true;
         }
     }
 
-    [Serializable]
-    internal class ArgumentExcept : Exception
-    {
-        public ArgumentExcept()
-        {
-        }
-
-        public ArgumentExcept(string message) : base(message)
-        {
-        }
-
-        public ArgumentExcept(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected ArgumentExcept(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
+    
 }
