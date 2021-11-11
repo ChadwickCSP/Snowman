@@ -113,7 +113,22 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            string word;
+            word = string.Empty;
+
+            foreach (char c in this.fullWord)
+            {
+                if (this.lettersGuessed.Contains(c))
+                {
+                    word += $"{c}";
+                }
+                else
+                {
+                    word += "_";
+                }
+            }
+
+            return word.Trim();
         }
 
         public bool IsGameOver()
