@@ -7,8 +7,8 @@ namespace WordGuesser
     {
 
         private string fullWord;
-        private List<char> lettersGuessed; 
-        private int incorrectGuesses; 
+        private List<char> lettersGuessed;
+        private int incorrectGuesses;
         private int guessLimit;
 
         public WordGame(string wordToGuess, int guessLimit)
@@ -34,8 +34,22 @@ namespace WordGuesser
         }
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            guess = guess.Trim().ToUpper();
+            if (guess.Length != 1)
+            {
+                return "You must guess a single letter";
+            }
+            else if (char.IsLetter(guess[0]) == false)
+            {
+                return "You can only guess letters";
+            }
+            else if (this.lettersGuessed.Contains(guess[0]))
+            {
+                return $"You've already guessed {guess}";
+            }
+            return "";
         }
+
 
         public int CountLetter(char guess)
         {
@@ -44,7 +58,7 @@ namespace WordGuesser
 
         public string GetFullWord()
         {
-            throw new System.NotImplementedException();
+            return this.fullWord;
         }
 
         public string GetGuessedLetters()
@@ -59,12 +73,25 @@ namespace WordGuesser
 
         public int GetIncorrectGuesses()
         {
-            throw new System.NotImplementedException();
+            return this.incorrectGuesses;
         }
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            string word; // Declare a string named "word"
+            word = string.Empty; // Assign the value  to the variable guess
+            foreach (char c in this.fullWord)
+            {
+                if (this.lettersGuessed.Contains(c))
+                {
+                    word += $"{c} ";
+                }
+                else
+                {
+                    word += "_ ";
+                }
+            }
+            return word.Trim();
         }
 
         public bool IsGameOver()
