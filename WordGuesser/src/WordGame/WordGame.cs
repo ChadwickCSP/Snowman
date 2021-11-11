@@ -26,26 +26,58 @@ namespace WordGuesser
                 }
             }
 
-<<<<<<< HEAD
             // TODO: Initialize member variables
-=======
-            // TODO: Initialize member variables 
->>>>>>> origin/zstephens
             this.fullWord = wordToGuess;
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.lettersGuessed = new List<char>();
-<<<<<<< HEAD
         }
-=======
-
-        }
-
->>>>>>> origin/zstephens
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            guess = guess.Trim().ToUpper;
+
+            if (guess.Length != 1) ;
+            {
+                Console.WriteLine("You must guess a single letter");
+            }
+
+
+            else if (char.IsLetter(guess[0] = false)) ;
+            {
+                Console.WriteLine("You can only guess letters");
+            }
+
+            else if (this.lettersGuessed.Contains(guess[0])) ;
+            {
+                Console.WriteLine($"You've already guessed {guess}");
+            }
+
+            else if (this.wordToGuess.Contains(guess) == false)
+            {
+                // If the character is a digit, we increment count by 1.
+                this.incorrectGuesses++;
+
+                // We check to see if there are no guesses
+                Console.WriteLine($"Ouch! No{guess}es");
+            }
+            // Declare a count variable to track the number of
+            // digits and initialize the value to 0.
+            int count;
+            count = 0;
+            count = result;
+
+            if(count == 1)
+        {
+            Console.WriteLine($"There is 1 {guess}");
         }
+            else
+            {
+                Console.WriteLine($"There are {count} {guess}es");
+            }
+
+
+        }
+
 
         public int CountLetter(char guess)
         {
