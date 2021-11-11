@@ -38,15 +38,15 @@ namespace WordGuesser
 
             if (guess.Length != 1)
             {
-                Console.WriteLine("You must guess a single letter");
+                return "You must guess a single letter";
             }
             else if (char.IsLetter(guess[0]) == false)
             {
-                Console.WriteLine("You can only guess letters");
+                return "You can only guess letters";
             }
             else if (this.lettersGuessed.Contains(guess[0]))
             {
-                Console.WriteLine($"You've already guessed {guess}");
+                return $"You've already guessed {guess}";
             }
             else if (this.fullWord.Contains(guess) == false)
             {
@@ -54,7 +54,7 @@ namespace WordGuesser
                 this.incorrectGuesses++;
 
                 // We check to see if there are no guesses
-                Console.WriteLine($"Ouch! No{guess}es");
+                return $"Ouch! No{guess}es";
             }
 
             // Declare a count variable to track the number of
@@ -64,11 +64,11 @@ namespace WordGuesser
 
             if (count == 1)
             {
-                Console.WriteLine($"There is 1 {guess}");
+                return $"There is 1 {guess}";
             }
             else
             {
-                Console.WriteLine($"There are {count} {guess}es");
+                return $"There are {count} {guess}es";
             }
 
 
