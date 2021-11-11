@@ -9,6 +9,7 @@ namespace WordGuesser
         private int guessLimit;
         private int incorrrectGuesses;
         private List<char> guesses;
+        private int CountLetter;
 
         public WordGame(string wordToGuess, int guessLimit)
         {
@@ -31,15 +32,33 @@ namespace WordGuesser
             this.guesses = new List<char>();
 
         }
+         private readonly string guess;
+
+        /// <summary>
+        /// Initializes an instance of the Stringanalyzer class specifying the string to be analyzed.
+        /// </summary>
+        /// <param name="toAnalyze">The string to be analyzed.</param>
+        public StringAnalyzer(string guess)
+        {
+            this.guess = guess;
+        }
 
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            return this.guess;
         }
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+            int count;
+            count = 0;
+            foreach (char c in this.guess)
+            {
+                if (char.IsDigit(c))
+                {
+                    count++;
+                }
+            }
         }
 
         public string GetFullWord()
