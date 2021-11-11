@@ -30,14 +30,14 @@ namespace WordGuesser
             }
 
             // TODO: Initialize member variables
-            this.fullWord = wordToGuess;
+            this.fullWord = wordToGuess.ToUpper();
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.lettersGuessed = new List<char>();
         }
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+
             guess = guess.Trim().ToUpper();
             if (guess.Length != 1)
             {
@@ -71,13 +71,26 @@ namespace WordGuesser
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
-            //Lucia
+            int count;
+            count = 0;
+            guess = char.ToUpper(guess);
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid character: {guess}.");
+            }
+
+            foreach (char c in this.fullWord)
+            {
+                if (c == guess)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         public string GetFullWord()
         {
-            throw new System.NotImplementedException();
             return this.fullWord;
         }
 
@@ -89,7 +102,6 @@ namespace WordGuesser
 
         public int GetGuessLimit()
         {
-            throw new System.NotImplementedException();
             return this.guessLimit;
         }
 
@@ -101,7 +113,6 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
             string word;
             word = string.Empty;
             foreach (char c in this.fullWord)
@@ -120,14 +131,11 @@ namespace WordGuesser
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
-            //Lucia
-
+            return this.incorrectGuesses >= this.guessLimit;
         }
 
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
             foreach (char c in this.fullWord)
             {
                 if (this.lettersGuessed.Contains(c))
