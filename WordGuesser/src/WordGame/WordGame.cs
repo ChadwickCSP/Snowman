@@ -11,8 +11,6 @@ namespace WordGuesser
         private List<char> lettersGuessed;
         private int incorrectGuesses;
         private int guessLimit;
-        private string wordToGuess;
-        private string guessedLetters;
 
         public WordGame(string wordToGuess, int guessLimit)
         {
@@ -52,7 +50,7 @@ namespace WordGuesser
                 return $"You've already guessed {guess}";
 
             }
-            else if (this.wordToGuess.Contains(guess) == false)
+            else if (this.fullWord.Contains(guess) == false)
             {
                 this.incorrectGuesses++;
                 this.lettersGuessed.Add(guess[0]);
@@ -60,13 +58,14 @@ namespace WordGuesser
             }
             int count;
             count = this.CountLetter(guess[0]);
+            this.lettersGuessed.Add(guess[0]);
 
             if (count == 1)
             {
                 return $"There is 1 {guess}";
             }
 
-            return $"There are {count} guesses";
+            return $"There are {count} {guess}s";
         }
 
         public int CountLetter(char guess)
@@ -96,8 +95,13 @@ namespace WordGuesser
 
         public string GetGuessedLetters()
         {
-            throw new System.NotImplementedException();
-            //Lucia
+            string letters;
+            letters = string.Empty;
+            foreach (char c in this.lettersGuessed)
+            {
+                letters += $" {c}";
+            }
+            return letters.Trim();
         }
 
         public int GetGuessLimit()
@@ -107,8 +111,7 @@ namespace WordGuesser
 
         public int GetIncorrectGuesses()
         {
-            throw new System.NotImplementedException();
-            //Lucia
+            return this.incorrectGuesses;
         }
 
         public string GetWord()
@@ -117,9 +120,9 @@ namespace WordGuesser
             word = string.Empty;
             foreach (char c in this.fullWord)
             {
-                if (this.guessedLetters.Contains(c))
+                if (this.lettersGuessed.Contains(c))
                 {
-                    word += $"{c}";
+                    word += $"{c} ";
                 }
                 else 
                 {
@@ -138,11 +141,7 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if (this.lettersGuessed.Contains(c))
-                {
-
-                }
-                else 
+                if (!this.lettersGuessed.Contains(c))
                 {
                     return false;
                 }
