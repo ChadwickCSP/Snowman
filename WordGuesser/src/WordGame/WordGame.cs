@@ -26,7 +26,7 @@ namespace WordGuesser
             }
 
             // TODO: Initialize member variables
-            this.fullWord = wordToGuess;
+            this.fullWord = wordToGuess.ToUpper();
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.lettersGuessed = new List<char>();
@@ -63,22 +63,22 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            return "";
         }
 
         public bool IsGameOver()
         {
-            return (this.incorrectGuesses >= this.guessLimit)
-        }
-        {
-            throw new System.NotImplementedException();
+            return (this.incorrectGuesses >= this.guessLimit);
         }
 
-    public bool IsGameWon()
-{
-    foreach(char in this.fullWord)
-    if (this.lettersGuessed.contains c)
-}
-    {
-        throw new System.NotImplementedException();
+        public bool IsGameWon()
+        {
+            foreach (char c in this.fullWord)
+            {
+                // if (this.lettersGuessed.contains c){
+                // }
+            }
+            return false;
+        }
     }
+}
