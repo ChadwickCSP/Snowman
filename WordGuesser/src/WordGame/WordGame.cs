@@ -133,12 +133,17 @@ namespace WordGuesser
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return (this.incorrectGuesses >= this.guessLimit)
         }
-
-        public bool IsGameWon()
         {
             throw new System.NotImplementedException();
         }
-    }
+
+    public bool IsGameWon()
+{
+    foreach(char in this.fullWord)
+    if (this.lettersGuessed.contains c)
 }
+    {
+        throw new System.NotImplementedException();
+    }
