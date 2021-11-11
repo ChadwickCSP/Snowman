@@ -134,14 +134,5 @@ namespace Examples
             return false;
         }
 
-        /// <summary>
-        /// Gets the full word.
-        /// </summary>
-        /// <returns>A string with the full word.</returns>
-        public string GetFullWord()
-        {
-            // If full word is complete, return the word.
-            return this.fullWord;
-        }
     }
 }

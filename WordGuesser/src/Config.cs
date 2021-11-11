@@ -54,7 +54,7 @@ namespace WordGuesser
         public static IWordGame GetWordGame(string wordToGuess, int guessLimit)
         {
             // TODO: Replace with your constructor.
-            return new WordGame (wordToGuess, guessLimit);
+            return new WordGame(wordToGuess, guessLimit);
         }
     }
 }
