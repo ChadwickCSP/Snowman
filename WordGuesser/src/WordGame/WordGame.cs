@@ -35,24 +35,26 @@ namespace WordGuesser
             guess = guess.Trim().ToUpper();
             if (guess.Length != 1)
             {
-                return ("You must guess a single letter");
+                return "You must guess a single letter";
             }
             if (char.IsLetter(guess[0]) == false)
             {
-                return ("You can only guess letters");
+                return "You can only guess letters";
             }
             if (this.lettersGuessed.Contains(guess[0]))
             {
-                return ($"You've already guessed {guess}");
+                return $"You've already guessed {guess}";
             }
-            if (this.wordToGuess.Contains(guess) == false)
+            if (this.fullWord.Contains(guess) == false)
             {
                 this.incorrectGuesses++;
                 this.lettersGuessed.Add(guess[0]);
-                return $"Ouch! No {guess}s"
+                return $"Ouch! No {guess}s";
             }
             int count;
             count = this.CountLetter(guess[0]);
+            this.lettersGuessed.Add(guess[0]);
+
             if (count == 1)
             {
                 return $"There is 1 {guess}";
@@ -83,7 +85,7 @@ namespace WordGuesser
 
         public string GetFullWord()
         {
-            throw new System.NotImplementedException();
+            return this.fullWord;
         }
 
         public string GetGuessedLetters()
@@ -119,8 +121,14 @@ namespace WordGuesser
 
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
+            foreach (char c in this.fullWord)
+            {
+                if (!this.lettersGuessed.Contains(c))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
-
 }
