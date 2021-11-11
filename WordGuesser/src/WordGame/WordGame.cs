@@ -151,7 +151,6 @@ namespace WordGuesser
 
         public bool IsGameWon()
         {
-<<<<<<< HEAD
             foreach (char c in this.fullWord)
             {
                if (this.lettersGuessed.Contains(c))
@@ -163,11 +162,4 @@ namespace WordGuesser
             return true;
         }
     }
-
-    
-=======
-            throw new System.NotImplementedException();
-        }
-    }
->>>>>>> origin/cgomez
 }
