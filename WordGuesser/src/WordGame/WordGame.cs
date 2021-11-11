@@ -60,7 +60,7 @@ namespace WordGuesser
             // Declare a count variable to track the number of
             // digits and initialize the value to 0.
             int count;
-            count = this.CountLetter(guess[0])
+            count = this.CountLetter(guess[0]);
 
             if (count == 1)
             {
@@ -70,49 +70,74 @@ namespace WordGuesser
             {
                 return $"There are {count} {guess}es";
             }
-
-
         }
-
-
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
-        }
 
-        public string GetFullWord()
-        {
-            throw new System.NotImplementedException();
-        }
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid Character: {guess}.");
+            }
+            else
+            {
 
-        public string GetGuessedLetters()
-        {
-            throw new System.NotImplementedException();
-        }
+                guess = char.ToUpper(guess);
 
-        public int GetGuessLimit()
-        {
-            throw new System.NotImplementedException();
-        }
+                int count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
 
-        public int GetIncorrectGuesses()
-        {
-            throw new System.NotImplementedException();
-        }
+                }
+                return count;
 
-        public string GetWord()
-        {
-            throw new System.NotImplementedException();
-        }
+            }
 
-        public bool IsGameOver()
-        {
-            throw new System.NotImplementedException();
-        }
+            public string GetFullWord()
+            {
+                throw new System.NotImplementedException();
+            }
 
-        public bool IsGameWon()
-        {
-            throw new System.NotImplementedException();
+            public string GetGuessedLetters()
+            {
+
+                string letters;
+                letters = string.Empty;
+                foreach (char c in this.lettersGuessed)
+                {
+                    letters += $" {c}";
+                }
+                return letters.Trim();
+            }
+
+
+
+            public int GetGuessLimit()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public int GetIncorrectGuesses()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public string GetWord()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public bool IsGameOver()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public bool IsGameWon()
+            {
+                throw new System.NotImplementedException();
+            }
         }
     }
-}
