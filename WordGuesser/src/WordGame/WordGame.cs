@@ -37,7 +37,7 @@ namespace WordGuesser
         }
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+
             guess = guess.Trim().ToUpper();
             if (guess.Length != 1)
             {
@@ -113,7 +113,6 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
             string word;
             word = string.Empty;
             foreach (char c in this.fullWord)
@@ -137,7 +136,6 @@ namespace WordGuesser
 
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
             foreach (char c in this.fullWord)
             {
                 if (this.lettersGuessed.Contains(c))
