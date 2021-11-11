@@ -25,19 +25,60 @@ namespace WordGuesser
             }
 
             // TODO: Initialize member variables
-            this.fullWord = wordToGuess;
+            this.fullWord = wordToGuess.ToUpper();
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.lettersGuessed = new List<char>();
         }
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            guess = guess.Trim().ToUpper();
+            if (guess.Length != 1)
+            {
+                return ("You must guess a single letter");
+            }
+            if (char.IsLetter(guess[0]) == false)
+            {
+                return ("You can only guess letters");
+            }
+            if (this.lettersGuessed.Contains(guess[0]))
+            {
+                return ($"You've already guessed {guess}");
+            }
+            if (this.wordToGuess.Contains(guess) == false)
+            {
+                this.incorrectGuesses++;
+                this.lettersGuessed.Add(guess[0]);
+                return $"Ouch! No {guess}s"
+            }
+            int count;
+            count = this.CountLetter(guess[0]);
+            if (count == 1)
+            {
+                return $"There is 1 {guess}";
+            }
+            return $"there are {count} {guess}s";
         }
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException($"Invalid character: {guess}.");
+            }
+            guess = char.ToUpper(guess);
+            int count;
+            count = 0;
+            foreach (char c in this.fullWord)
+            {
+                if (c == guess)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         public string GetFullWord()
@@ -47,7 +88,13 @@ namespace WordGuesser
 
         public string GetGuessedLetters()
         {
-            throw new System.NotImplementedException();
+            string letters;
+            letters = string.Empty;
+            foreach (char c in this.lettersGuessed)
+            {
+                letters += $"{c}";
+            }
+            return letters.Trim();
         }
 
         public int GetGuessLimit()
@@ -75,4 +122,5 @@ namespace WordGuesser
             throw new System.NotImplementedException();
         }
     }
+
 }
