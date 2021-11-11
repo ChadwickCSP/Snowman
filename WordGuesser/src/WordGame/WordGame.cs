@@ -52,12 +52,12 @@ namespace WordGuesser
 
         public int GetGuessLimit()
         {
-            throw new System.NotImplementedException();
+            return this.guessLimit;
         }
 
         public int GetIncorrectGuesses()
         {
-            throw new System.NotImplementedException();
+            return this.incorrectGuesses;
         }
 
         public string GetWord()
@@ -67,7 +67,7 @@ namespace WordGuesser
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return this.incorrectGuesses >= this.guessLimit;
         }
 
         public bool IsGameWon()
