@@ -7,8 +7,8 @@ namespace WordGuesser
     {
 
         private string fullWord;
-        private List<char> lettersGuessed; 
-        private int incorrectGuesses; 
+        private List<char> lettersGuessed;
+        private int incorrectGuesses;
         private int guessLimit;
 
         public WordGame(string wordToGuess, int guessLimit)
@@ -39,18 +39,12 @@ namespace WordGuesser
 
         public int CountLetter(char guess)
         {
-            string charGuess;
-            string toUpper;
-
-            throw new System.NotImplementedException();
             if (!char.IsLetter(guess))
             {
                 throw new ArgumentException($"Invalid character: {guess}.");
             }
-            else 
-            {
-                charGuess = char.toUpper(guess);
-            }
+            guess = char.ToUpper(guess);
+            return 0;
         }
 
         public string GetFullWord()
@@ -65,7 +59,7 @@ namespace WordGuesser
             string letters;
             letters = string.Empty;
 
-            foreach (char c in this.GetGuessedLetters)
+            foreach (char c in this.lettersGuessed)
             {
                 letters += $"{c}";
             }
@@ -74,7 +68,6 @@ namespace WordGuesser
 
         public int GetGuessLimit()
         {
-            throw new System.NotImplementedException();
             return this.guessLimit;
         }
 
@@ -90,16 +83,14 @@ namespace WordGuesser
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
             return this.incorrectGuesses >= this.guessLimit;
         }
 
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
             foreach (char c in this.fullWord)
             {
-                if (this.lettersGuessed.Contains(c))
+                if (!this.lettersGuessed.Contains(c))
                 {
                     return false;
                 }
