@@ -42,7 +42,7 @@ variable.
 
 ![Declare](diagrams/CodeExamples/Declare.png)
 
-![Declare](diagrams/CodeExamples/Declare-Declare-String.png)
+![Declare](diagrams/CodeExamples/Declare-String.png)
 
 ![Declare](diagrams/CodeExamples/Declare-List.png)
 
