@@ -38,6 +38,27 @@ namespace WordGuesser
 
         public int CountLetter(char guess)
         {
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid character: {guess}.");
+            }
+            else
+            {
+                char.ToUpper(guess);
+                guess = result
+                int count;
+                count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
+
+                    return count;
+                }
+            }
+
             throw new System.NotImplementedException();
         }
 
@@ -53,11 +74,13 @@ namespace WordGuesser
 
         public int GetGuessLimit()
         {
+            return this.guessLimit;
             throw new System.NotImplementedException();
         }
 
         public int GetIncorrectGuesses()
         {
+            return this.incorrectGuesses;
             throw new System.NotImplementedException();
         }
 
