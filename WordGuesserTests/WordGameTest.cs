@@ -15,7 +15,7 @@ namespace WordGuesserTests
         /// if the word contains non-letters and if the guessLimit is not valid.
         /// </summary>
         [Test]
-        public void TestInvalidConstructWordGame()
+        public void TestInvalidConstructors()
         {
             // Tests that numbers are invalid
             Assert.Throws<ArgumentException>(() => { Config.GetWordGame("3", 5); });
@@ -28,52 +28,92 @@ namespace WordGuesserTests
 
             // Tests that negative number is invalid
             Assert.Throws<ArgumentException>(() => { Config.GetWordGame("valid", -5); });
-
-            // Tests valid constructors
-            IWordGame game = Config.GetWordGame("valid", 5);
-            Assert.AreEqual(0, game.GetIncorrectGuesses());
-            Assert.AreEqual(5, game.GetGuessLimit());
-            Assert.AreEqual("VALID", game.GetFullWord());
-            Assert.AreEqual(string.Empty, game.GetGuessedLetters());
-
-            game = Config.GetWordGame("word", 3);
-            Assert.AreEqual(0, game.GetIncorrectGuesses());
-            Assert.AreEqual(3, game.GetGuessLimit());
-            Assert.AreEqual("WORD", game.GetFullWord());
-            Assert.AreEqual(string.Empty, game.GetGuessedLetters());
-
-            game = Config.GetWordGame("another", 17);
-            Assert.AreEqual(0, game.GetIncorrectGuesses());
-            Assert.AreEqual(17, game.GetGuessLimit());
-            Assert.AreEqual("ANOTHER", game.GetFullWord());
-            Assert.AreEqual(string.Empty, game.GetGuessedLetters());
         }
 
         /// <summary>
-        /// Tests valid constructors for WordGame. The WordGame constructor should
-        /// convert the provided word to upper case, set incorrect guesses to 0, set
-        /// the guessed letters to none and set the guess limit.
+        /// Tests that the constructor for getting a word game returns an
+        /// object when given valid parameters.
         /// </summary>
         [Test]
-        public void TestValidConstructWordGame()
+        public void TestValidConstructors()
+        {
+            // Tests that it is possible to construct word games
+            IWordGame game = Config.GetWordGame("valid", 5);
+            Assert.NotNull(game);
+
+            game = Config.GetWordGame("word", 3);
+            Assert.NotNull(game);
+
+            game = Config.GetWordGame("another", 17);
+            Assert.NotNull(game);
+        }
+
+        /// <summary>
+        /// Tests the initial value of GetIncorrectGuesses is 0.
+        /// </summary>
+        [Test]
+        public void TestInitialGetIncorrectGuesses()
         {
             // Tests valid constructors
             IWordGame game = Config.GetWordGame("valid", 5);
             Assert.AreEqual(0, game.GetIncorrectGuesses());
-            Assert.AreEqual(5, game.GetGuessLimit());
-            Assert.AreEqual("VALID", game.GetFullWord());
-            Assert.AreEqual(string.Empty, game.GetGuessedLetters());
 
             game = Config.GetWordGame("word", 3);
             Assert.AreEqual(0, game.GetIncorrectGuesses());
-            Assert.AreEqual(3, game.GetGuessLimit());
-            Assert.AreEqual("WORD", game.GetFullWord());
-            Assert.AreEqual(string.Empty, game.GetGuessedLetters());
 
             game = Config.GetWordGame("another", 17);
             Assert.AreEqual(0, game.GetIncorrectGuesses());
+        }
+
+        /// <summary>
+        /// Tests GetGuessLimit returns the specifid guess limit.
+        /// </summary>
+        [Test]
+        public void TestGetGuessLimit()
+        {
+            // Tests valid constructors
+            IWordGame game = Config.GetWordGame("valid", 5);
+            Assert.AreEqual(5, game.GetGuessLimit());
+
+            game = Config.GetWordGame("word", 3);
+            Assert.AreEqual(3, game.GetGuessLimit());
+
+            game = Config.GetWordGame("another", 17);
             Assert.AreEqual(17, game.GetGuessLimit());
+        }
+
+        /// <summary>
+        /// Tests that GetFullWord returns the specified word to be guess in all uppercase letters.
+        /// </summary>
+        [Test]
+        public void TestGetFullWord()
+        {
+            // Tests valid constructors
+            IWordGame game = Config.GetWordGame("valid", 5);
+            Assert.AreEqual("VALID", game.GetFullWord());
+
+            game = Config.GetWordGame("word", 3);
+            Assert.AreEqual("WORD", game.GetFullWord());
+
+            game = Config.GetWordGame("another", 17);
             Assert.AreEqual("ANOTHER", game.GetFullWord());
+        }
+
+        /// <summary>
+        /// Tests that GetLettersGuessed returns an empty string immediately after
+        /// being constructed.
+        /// </summary>
+        [Test]
+        public void TestInitialGetLettersGuessed()
+        {
+            // Tests valid constructors
+            IWordGame game = Config.GetWordGame("valid", 5);
+            Assert.AreEqual(string.Empty, game.GetGuessedLetters());
+
+            game = Config.GetWordGame("word", 3);
+            Assert.AreEqual(string.Empty, game.GetGuessedLetters());
+
+            game = Config.GetWordGame("another", 17);
             Assert.AreEqual(string.Empty, game.GetGuessedLetters());
         }
 

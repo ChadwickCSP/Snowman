@@ -6,9 +6,9 @@ game. Then, using that library, you will implement a Guessing Game called
 
 This project will count as 2 grades: 
 
-* The first part, Milestone 1 and 2, will be completed in a group of 2 or 3
+* The first part, Milestone 1, 2, and 3 will be completed in a group of 2 or 3
   students. This will be your first grade.
-* The second part, Milestones 3, 4, and 5 must be completed individually. This
+* The second part, Milestones 4, and 5 must be completed individually. This
   will be your second grade.
 
 - [Snowman](#snowman)
@@ -39,6 +39,7 @@ This project will count as 2 grades:
     - [Testing Milestone 2](#testing-milestone-2)
     - [Deliverable](#deliverable-1)
   - [Milestone 3](#milestone-3)
+    - [Deliverable](#deliverable-2)
   - [Milestone 4](#milestone-4)
   - [Milestone 5](#milestone-5)
 
@@ -493,7 +494,7 @@ help you test your code. To run these,
 
 ### Deliverable
 
-To submit Milestone 3, you should finish your implementation of the `IWordGame`
+To submit Milestone 2, you should finish your implementation of the `IWordGame`
 interface and pass all tests.
 
 Finally, all of the work should be merged to your `main` branch and a tag called
@@ -507,14 +508,43 @@ and verify it is available online.
 
 ## Milestone 3
 
-Setting up Unity Coming Soon!
+Due: Monday November 15th
+
+For this Milestone, your group should finish the `WrittenResponse/README.md` file.
+For full credit, each member of the group should complete at least 2 sections. You may
+however work on this section together.
+
+### Deliverable
+
+To submit Milestone 3, you should finish the `WrittenResponse/README.md` file.
+
+Finally, all of the work should be merged to your `main` branch and a tag called
+`milestone-3` should be created.
+
+If you later decide you would like to change the commit for milestone-3 you may
+create additional tags with a version number. For example, milestone-3-v2 or
+milestone-3-v3. For final grading, the milestone-3 tag with the greatest version
+number will be used. After creating your tag, don't forget to push it to GitHub
+and verify it is available online.
 
 ## Milestone 4
 
-Complete the Snowman Game Coming Soon!
+Due: Monday November 15th
+
+For the final part of the project, you will use the WordGuesser library your group
+made in Milestone 2 to control the logic of a guessing game using the software framework
+Unity.
+
+To do this, you must download and install Unity. For this project, we will be using
+Unity 2020.3. To do this, first you will install Unity Hub.
+
+Window: [LINK](https://unity3d.com/get-unity/download)
+Mac: [LINK](https://drive.google.com/file/d/1PHnpMFkHKqsxEiO2TEJUjf58BP3tVZNY/view?usp=sharing)
+
+Unity Setup Instructions: [LINK](UnitySetup/README.md)
 
 ## Milestone 5
 
-Complete Written Response
+Complete the Snowman Game Coming Soon!
 
 Coming Soon!
