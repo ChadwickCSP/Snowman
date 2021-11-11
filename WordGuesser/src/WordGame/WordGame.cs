@@ -146,5 +146,10 @@ namespace WordGuesser
             return true;
         }
 
+        public string GetWord()
+        {
+            throw new System.NotImplementedException();
+        }
+
     }
 }
