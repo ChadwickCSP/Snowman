@@ -34,25 +34,21 @@ namespace WordGuesser
         }
         public string CheckGuess(string guess)
         {
-            guess = guess.Trim().ToUpper;
+            guess = guess.Trim().ToUpper();
 
-            if (guess.Length != 1) ;
+            if (guess.Length != 1)
             {
                 Console.WriteLine("You must guess a single letter");
             }
-
-
-            else if (char.IsLetter(guess[0] = false)) ;
+            else if (char.IsLetter(guess[0]) == false)
             {
                 Console.WriteLine("You can only guess letters");
             }
-
-            else if (this.lettersGuessed.Contains(guess[0])) ;
+            else if (this.lettersGuessed.Contains(guess[0]))
             {
                 Console.WriteLine($"You've already guessed {guess}");
             }
-
-            else if (this.wordToGuess.Contains(guess) == false)
+            else if (this.fullWord.Contains(guess) == false)
             {
                 // If the character is a digit, we increment count by 1.
                 this.incorrectGuesses++;
@@ -60,16 +56,16 @@ namespace WordGuesser
                 // We check to see if there are no guesses
                 Console.WriteLine($"Ouch! No{guess}es");
             }
+
             // Declare a count variable to track the number of
             // digits and initialize the value to 0.
             int count;
-            count = 0;
-            count = result;
+            count = this.CountLetter(guess[0])
 
-            if(count == 1)
-        {
-            Console.WriteLine($"There is 1 {guess}");
-        }
+            if (count == 1)
+            {
+                Console.WriteLine($"There is 1 {guess}");
+            }
             else
             {
                 Console.WriteLine($"There are {count} {guess}es");
