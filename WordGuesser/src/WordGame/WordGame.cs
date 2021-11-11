@@ -71,8 +71,10 @@ namespace WordGuesser
             letters = string.Empty;
             foreach (char c in this.lettersGuessed)
             {
-                letters += $"{c}";
+                letters += $"{c} ";
             }
+            
+            return letters;
         }
 
         public int GetGuessLimit()
