@@ -9,10 +9,10 @@ Daniel Rosenzweig
 
 ## Member Variables
 
-List<char> lettersGuessed;
+List<char> guessedLetters;
 int incorrectGuesses;
 int guessLimit;
-string fullWord;
+string wordToGuess;
 
 ## Constructors
 
