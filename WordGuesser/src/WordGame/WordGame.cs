@@ -78,9 +78,19 @@ namespace WordGuesser
             return this.incorrrectGuesses;
         }
 
-        public string GetWord() //DO THIS ONE
+        public string GetWord() 
         {
-            return this.fullWord;
+            string word;
+            word = string.Empty;
+            foreach(char c in this.fullWord)
+            {
+                if (this.guesses.Contains(c))
+                {
+                    word +=$"{c}";
+                }
+                word += "_ ";
+            }
+            return word.Trim();
         }
         // Austins methods
         public bool IsGameOver()
