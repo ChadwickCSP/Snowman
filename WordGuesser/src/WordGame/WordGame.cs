@@ -76,12 +76,12 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if (this.guesses.Contains(c) === false)
+                if (this.guesses.Contains(c) == false)
                 {
                     return false;
                 }
-                return true; 
             }
+            return true; 
         }
     }
 
