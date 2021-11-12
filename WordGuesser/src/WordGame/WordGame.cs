@@ -31,15 +31,25 @@ namespace WordGuesser
             this.guesses = new List<char>();
 
         }
+         private readonly string guess;
 
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            return this.guess;
         }
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+            int count;
+            count = 0;
+            foreach (char c in this.guess)
+            {
+                if (char.IsDigit(c))
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         public string GetFullWord()
