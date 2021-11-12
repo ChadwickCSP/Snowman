@@ -95,7 +95,14 @@ namespace WordGuesser
 
         public string GetGuessedLetters()
         {
-            throw new System.NotImplementedException();
+            string letters;
+            letters = string.Empty;
+            foreach (char c in this.guesses)
+            {
+                letters += $" {c}";
+            }
+            return letters.Trim();
+
         }
 
         public int GetGuessLimit()
@@ -110,12 +117,24 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            string word;
+            word = string.Empty;
+            foreach (char c in this.fullWord)
+            {
+                if (this.guesses.Contains(c)){
+                    word += $"{c} ";
+                }
+                else
+                {
+                    word += "_ ";
+                }
+            }
+            return word.Trim();
         }
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return this.incorrectGuesses >= this.guessLimit;
         }
 
         public bool IsGameWon()
