@@ -1,21 +1,16 @@
-
-
 namespace WordGuesser
 {
     using System;
     using System.Collections.Generic;
 
     public class WordGame : IWordGame
-
     {
-
         private string fullWord;
         private int guessLimit;
         private int incorrectGuesses;
         private List<char> guesses;
 
         private List<char> lettersGuessed;
-        
 
         public WordGame(string wordToGuess, int guessLimit)
         {
@@ -44,15 +39,28 @@ namespace WordGuesser
             {
                 return "You must guess a single letter.";
             }
-            else if (char.IsLetter(guess(0) == false))
+            else if (char.IsLetter(guess[0]) == false)
             {
                 return "You can only guess letters";
             }
-            else if (this.lettersGuessed.Contains(guess) = 0)
+            else if (this.lettersGuessed.Contains(guess[0]))
             {
                 return $"You've already guessed {guess}.";
             }
             else if (this.fullWord.Contains(guess) == false)
+            {
+                this.incorrectGuesses++;
+                this.lettersGuessed.Add(guess[0]);
+                return $"Ouch. No {guess}s";
+            }
+
+            int count = this.CountLetter(guess[0]);
+            if (count == 1)
+            {
+                return $"There is {guess}";
+            }
+
+            return $"There are {count}{guess}s";
         }
 
         public int CountLetter(char guess)
@@ -61,10 +69,20 @@ namespace WordGuesser
             {
                 throw new ArgumentException($"Invalid character: {guess}.");
             }
-            else
+
+            guess = char.ToUpper(guess);
+
+            int count = 0;
+
+            foreach (char c in this.fullWord)
             {
-                char.ToUpper(guess);
+                if (c == guess)
+                {
+                    count++;
+                }
             }
+
+            return count;
         }
 
         public string GetFullWord()
@@ -76,6 +94,7 @@ namespace WordGuesser
         {
             throw new System.NotImplementedException();
         }
+
         public int GetGuessLimit()
         {
             return this.guessLimit;
