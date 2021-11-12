@@ -76,14 +76,7 @@ namespace WordGuesser
 
         public bool IsGameWon()
         {
-            foreach (char c in this.fullWord)
-            {
-                if (this.guessedLetters.Contains(c) = true)
-                {
-                    return false;
-                }
-                return true;
-            }
+            throw new System.NotImplementedException();
         }
     }
 
