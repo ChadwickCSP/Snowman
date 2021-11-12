@@ -116,7 +116,7 @@ namespace WordGuesser
         // Austins methods
         public bool IsGameOver()
         {
-            return this.incorrrectGuesses >= this.guessLimit;
+            return this.incorrectGuesses >= this.guessLimit;
         }
         // Austins methods
         public bool IsGameWon()
