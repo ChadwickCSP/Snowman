@@ -31,15 +31,25 @@ namespace WordGuesser
             this.guesses = new List<char>();
 
         }
+         private readonly string guess;
 
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            return this.guess;
         }
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+            int count;
+            count = 0;
+            foreach (char c in this.guess)
+            {
+                if (char.IsDigit(c))
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         public string GetFullWord()
@@ -72,15 +82,22 @@ namespace WordGuesser
         {
             return this.fullWord;
         }
-
+        // Austins methods
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return this.incorrrectGuesses >= this.guessLimit;
         }
-
+        // Austins methods
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
+            foreach (char c in this.fullWord)
+            {
+                if (this.guesses.Contains(c) == false)
+                {
+                    return false;
+                }
+            }
+            return true; 
         }
     }
 
