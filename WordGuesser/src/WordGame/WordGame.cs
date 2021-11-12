@@ -7,7 +7,7 @@ namespace WordGuesser
     {
         private string fullWord;
         private int guessLimit;
-        private int incorrrectGuesses;
+        private int incorrectGuesses;
         private List<char> guesses;
 
         public WordGame(string wordToGuess, int guessLimit)
@@ -27,24 +27,61 @@ namespace WordGuesser
 
             this.fullWord = wordToGuess.ToUpper();
             this.guessLimit = guessLimit;
-            this.incorrrectGuesses = 0;
+            this.incorrectGuesses = 0;
             this.guesses = new List<char>();
 
         }
-         private readonly string guess;
 
         public string CheckGuess(string guess)
         {
-            return this.guess;
+            guess = guess.Trim().ToUpper();
+            if (guess.Length != 1)
+            {
+                return "You must guess a single letter";
+            }
+            else if (!char.IsLetter(guess[0]))
+            {
+                return "You can only guess letters";
+            }
+            else if (this.guesses.Contains(guess[0]))
+            {
+                return $"You've already guessed {guess}";
+            }
+            else if (!this.fullWord.Contains(guess))
+            {
+                this.incorrectGuesses++;
+                this.guesses.Add(guess[0]);
+                return $"Ouch! No {guess}s";
+            }
+            else
+            {
+                int count;
+                count = this.CountLetter(guess[0]);
+                if (count == 1)
+                {
+                    return $"There is 1 {guess}";
+                }
+                else
+                {
+                    return $"There are {count}{guess}s";
+                }
+            }
         }
 
         public int CountLetter(char guess)
         {
+            guess = char.ToUpper(guess);
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid character: {guess}.");
+
+
+            }
             int count;
             count = 0;
-            foreach (char c in this.guess)
+            foreach (char c in fullWord)
             {
-                if (char.IsDigit(c))
+                if (c == guess)
                 {
                     count++;
                 }
@@ -75,7 +112,7 @@ namespace WordGuesser
 
         public int GetIncorrectGuesses()
         {
-            return this.incorrrectGuesses;
+            return this.incorrectGuesses;
         }
 
         public string GetWord() //DO THIS ONE
