@@ -50,15 +50,9 @@ namespace WordGuesser
             }
             else if (this.fullWord.Contains(guess) == false)
             {
-                // If the character is a digit, we increment count by 1.
                 this.incorrectGuesses++;
-
-                // We check to see if there are no guesses
                 return $"Ouch! No{guess}es";
             }
-
-            // Declare a count variable to track the number of
-            // digits and initialize the value to 0.
             int count;
             count = this.CountLetter(guess[0]);
 
@@ -66,10 +60,9 @@ namespace WordGuesser
             {
                 return $"There is 1 {guess}";
             }
-            else
-            {
-                return $"There are {count} {guess}es";
-            }
+
+            return $"There are {count} {guess}es";
+
         }
 
         public string GetFullWord()
@@ -119,8 +112,7 @@ namespace WordGuesser
         public string GetGuessedLetters()
         {
 
-            string letters;
-            letters = string.Empty;
+            string letters = string.Empty;
             foreach (char c in this.lettersGuessed)
             {
                 letters += $" {c}";
@@ -148,7 +140,19 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            string word = string.Empty;
+            foreach (char c in this.fullWord)
+            {
+                if (this.lettersGuessed.Contains(c))
+                {
+                    word += $"{c}";
+                }
+                else
+                {
+                    word += "_";
+                }
+            }
+            return word.Trim();
         }
 
     }
