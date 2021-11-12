@@ -59,7 +59,7 @@ namespace WordGuesser
             {
                 return $"There is 1 {guess}";
             }
-            return $"there are {count} {guess}s";
+            return $"There are {count} {guess}s";
         }
 
         public int CountLetter(char guess)
@@ -94,7 +94,7 @@ namespace WordGuesser
             letters = string.Empty;
             foreach (char c in this.lettersGuessed)
             {
-                letters += $"{c}";
+                letters += $"{c} ";
             }
             return letters.Trim();
         }
@@ -111,7 +111,20 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            string word;
+            word = string.Empty;
+            foreach (char c in this.fullWord)
+            {
+                if (this.lettersGuessed.Contains(c))
+                {
+                    word += $"{c} ";
+                }
+                else
+                {
+                    word += "_ ";
+                }
+            }
+            return word.Trim();
         }
 
         public bool IsGameOver()
