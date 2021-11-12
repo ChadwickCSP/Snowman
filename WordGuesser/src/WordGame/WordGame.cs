@@ -67,7 +67,21 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            string word;
+            word = string.Empty;
+            foreach (char c in this.fullWord)
+            {
+                if (this.guesses.Contains(c))
+                {
+                    word += $"{c} ";
+                }
+                else
+                {
+                    word += "_ ";
+                }
+            }
+            return word.Trim();
+
         }
 
         public bool IsGameOver()
@@ -77,7 +91,7 @@ namespace WordGuesser
 
         public bool IsGameWon()
         {
-            foreach(char c in this.fullWord)
+            foreach (char c in this.fullWord)
             {
                 if (this.guesses.Contains(c) == false)
                 {
