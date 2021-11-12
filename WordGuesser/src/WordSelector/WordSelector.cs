@@ -103,10 +103,7 @@ namespace WordGuesser
         /// <inheritdoc/>
         public string GetWord(params IWordFilter[] filters)
         {
-            // TODO: Throw exception if no words match?
-            List<string> possibleWords = this.GetDictionary(filters);
-            int ix = this.randomGenerator.Next(possibleWords.Count);
-            return possibleWords[ix];
+            return string.Empty;
         }
     }
 }
