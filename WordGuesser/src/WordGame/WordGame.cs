@@ -13,6 +13,7 @@ namespace WordGuesser
         private List<char> guessedLetters;
         private string word;
         private string letters;
+        private int count;
 
         public WordGame(string wordToGuess, int guessLimit)
         {
@@ -45,7 +46,24 @@ namespace WordGuesser
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid character: {guess}.");
+            }
+            else
+            {
+                char.ToUppter(guess);
+                guess = result;
+                count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c = guess)
+                    {
+                        count++;
+                    }
+                }
+                return count;
+            }
         }
 
         public string GetFullWord()
