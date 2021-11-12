@@ -3,51 +3,13 @@ namespace WordGuesser
     using System;
     using System.Collections.Generic;
 
-    public class NewBaseType
+    public class WordGame : IWordGame
     {
         private string fullWord;
         private int guessLimit;
         private int incorrectGuesses;
         private List<char> guesses;
         private List<char> guessedLetters;
-
-        public string CheckGuess(string guess)
-        {
-            guess = guessTrim().ToUpper();
-            if (guess.Length != 1)
-            {
-                return "You must guess a single letter";
-            }
-            if (char.IsLetter(guess[0]) == false)
-            {
-                return "You can only guess letters";
-            }
-
-            if (this.guessedLetters.Contains(guess[0])
-            {
-                return $"You've already guessed {guess}";
-            }
-
-            if (this.fullWord.Contains(guess) == false)
-            {
-                this.incorrectGuesses++;
-                this.guessedLetters.Add(guess[0]);
-                return $"Ouch! No {guess}s";
-
-            }
-            int count;
-            this.CountLetter(guess[0]);
-            if (count != 1)
-            {
-                return $"There are {count} {guess}s";
-            }
-            return $"There is 1 {guess}";
-
-        }
-    }
-
-    public class WordGame : NewBaseType, IWordGame
-    {
         public WordGame(string wordToGuess, int guessLimit)
         {
             if (guessLimit <= 0)
@@ -68,8 +30,41 @@ namespace WordGuesser
             this.incorrectGuesses = 0;
             this.guesses = new List<char>();
         }
-    }
-}
+
+
+        public string CheckGuess(string guess)
+        {
+            guess = guess.Trim().ToUpper();
+            if (guess.Length != 1)
+            {
+                return "You must guess a single letter";
+            }
+            if (char.IsLetter(guess[0]) == false)
+            {
+                return "You can only guess letters";
+            }
+
+            if (this.guessedLetters.Contains(guess[0]))
+            {
+                return $"You've already guessed {guess}";
+            }
+
+            if (this.fullWord.Contains(guess) == false)
+            {
+                this.incorrectGuesses++;
+                this.guessedLetters.Add(guess[0]);
+                return $"Ouch! No {guess}s";
+
+            }
+            int count = this.CountLetter(guess[0]);
+            if (count != 1)
+            {
+                return $"There are {count} {guess}s";
+            }
+            return $"There is 1 {guess}";
+
+        }
+
 
         public int CountLetter(char guess)
         {
@@ -110,12 +105,12 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if this.guessedLetters.Contains(c) = false
+                if (this.guessedLetters.Contains(c) == false)
                 {
-                    return bool false;
+                    return false;
                 }
             }
-            return bool true;
+            return true;
         }
     }
 
