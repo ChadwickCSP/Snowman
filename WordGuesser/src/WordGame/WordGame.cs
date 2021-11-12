@@ -31,7 +31,7 @@ namespace WordGuesser
             this.guesses = new List<char>();
 
         }
-
+        // Susan's Methods
         public string CheckGuess(string guess)
         {
             guess = guess.Trim().ToUpper();
@@ -57,17 +57,18 @@ namespace WordGuesser
             {
                 int count;
                 count = this.CountLetter(guess[0]);
+                this.guesses.Add(guess[0]);
                 if (count == 1)
                 {
                     return $"There is 1 {guess}";
                 }
                 else
                 {
-                    return $"There are {count}{guess}s";
+                    return $"There are {count} {guess}s";
                 }
             }
         }
-
+        // Susan's Methods
         public int CountLetter(char guess)
         {
             guess = char.ToUpper(guess);
@@ -93,14 +94,14 @@ namespace WordGuesser
         {
             return this.fullWord;
         }
-
-        public string GetGuessedLetters() // DO THIS ONE
+        // Hudson's Methods
+        public string GetGuessedLetters()
         {
             string letters;
             letters = string.Empty;
             foreach (char c in this.guesses)
             {
-                letters += $"{c}";
+                letters += $"{c} ";
             }
             return letters.Trim();
         }
@@ -114,8 +115,8 @@ namespace WordGuesser
         {
             return this.incorrectGuesses;
         }
-
-        public string GetWord() //DO THIS ONE
+        // Hudson's Methods
+        public string GetWord()
         {
             return this.fullWord;
         }
@@ -129,12 +130,12 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if (this.guesses.Contains(c) == false)
+                if (!this.guesses.Contains(c))
                 {
                     return false;
                 }
             }
-            return true; 
+            return true;
         }
     }
 
