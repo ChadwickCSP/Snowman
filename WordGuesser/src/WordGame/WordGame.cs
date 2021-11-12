@@ -59,6 +59,7 @@ namespace WordGuesser
 
             int count;
             count = this.CountLetter(guess[0]);
+            this.guesses.Add(guess[0]);
             if (count == 1)
             {
                 return $"There is 1 {guess}";
@@ -121,7 +122,8 @@ namespace WordGuesser
             word = string.Empty;
             foreach (char c in this.fullWord)
             {
-                if (this.guesses.Contains(c)){
+                if (this.guesses.Contains(c))
+                {
                     word += $"{c} ";
                 }
                 else
@@ -129,6 +131,7 @@ namespace WordGuesser
                     word += "_ ";
                 }
             }
+
             return word.Trim();
         }
 
@@ -141,7 +144,7 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if (this.guesses.Contains(c))
+                if (!this.guesses.Contains(c))
                 {
                     return false;
                 }
