@@ -72,12 +72,19 @@ namespace WordGuesser
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return this.incorrectGuesses >= this.guessLimit;
         }
 
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
+            foreach(char c in this.fullWord)
+            {
+                if (this.guesses.Contains(c) == false)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 
