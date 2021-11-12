@@ -51,17 +51,18 @@ namespace WordGuesser
             else if (this.fullWord.Contains(guess) == false)
             {
                 this.incorrectGuesses++;
-                return $"Ouch! No{guess}es";
+                this.lettersGuessed.Add(guess[0]);
+                return $"Ouch! No {guess}s";
             }
             int count;
             count = this.CountLetter(guess[0]);
-
+            this.lettersGuessed.Add(guess[0]);
             if (count == 1)
             {
                 return $"There is 1 {guess}";
             }
 
-            return $"There are {count} {guess}es";
+            return $"There are {count} {guess}s";
 
         }
 
@@ -129,7 +130,7 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if (this.lettersGuessed.Contains(c))
+                if (!this.lettersGuessed.Contains(c))
                 {
                     return false;
                 }
@@ -145,11 +146,11 @@ namespace WordGuesser
             {
                 if (this.lettersGuessed.Contains(c))
                 {
-                    word += $"{c}";
+                    word += $"{c} ";
                 }
                 else
                 {
-                    word += "_";
+                    word += "_ ";
                 }
             }
             return word.Trim();
