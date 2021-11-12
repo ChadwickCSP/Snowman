@@ -66,15 +66,22 @@ namespace WordGuesser
         {
             throw new System.NotImplementedException();
         }
-
+        // Austins methods
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return this.incorrrectGuesses >= this.guessLimit;
         }
-
+        // Austins methods
         public bool IsGameWon()
         {
-            throw new System.NotImplementedException();
+            foreach (char c in this.fullWord)
+            {
+                if (this.guesses.Contains(c) === false)
+                {
+                    return false;
+                }
+                return true; 
+            }
         }
     }
 
