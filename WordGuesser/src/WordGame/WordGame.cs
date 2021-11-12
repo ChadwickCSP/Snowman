@@ -10,6 +10,7 @@ namespace WordGuesser
         private int guessLimit;
         private int incorrectGuesses;
         private List<char> guesses;
+        private string word;
 
         public WordGame(string wordToGuess, int guessLimit)
         {
@@ -39,7 +40,7 @@ namespace WordGuesser
 
         public int CountLetter(char guess)
         {
-            return 
+
         }
 
         public string GetFullWord()
@@ -49,7 +50,13 @@ namespace WordGuesser
 
         public string GetGuessedLetters()
         {
-            return this.List<char>();
+            letters = string.Empty;
+            while (this.guessedLetters(char c))
+            {
+                letters += $" {c}";
+            }
+            return string letters.Trim();
+
         }
 
         public int GetGuessLimit()
@@ -64,12 +71,21 @@ namespace WordGuesser
 
         public string GetWord()
         {
-            throw new System.NotImplementedException();
+            word = string.Empty;
+            while (this.fullWord(char c))
+            {
+                if this.guessedLetters.Contains(c){
+                    word += $"{c}";
+                }
+                else
+                    word += "_";
+            }
+            return string word.Trim();
         }
 
         public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return bool this.incorrectGuesses >= this.guessLimit;
         }
 
         public bool IsGameWon()
