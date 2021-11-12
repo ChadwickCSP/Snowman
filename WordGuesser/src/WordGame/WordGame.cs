@@ -9,7 +9,6 @@ namespace WordGuesser
         private int guessLimit;
         private int incorrrectGuesses;
         private List<char> guesses;
-        private int CountLetter;
 
         public WordGame(string wordToGuess, int guessLimit)
         {
@@ -38,10 +37,10 @@ namespace WordGuesser
         /// Initializes an instance of the Stringanalyzer class specifying the string to be analyzed.
         /// </summary>
         /// <param name="toAnalyze">The string to be analyzed.</param>
-        public StringAnalyzer(string guess)
-        {
-            this.guess = guess;
-        }
+        // public StringAnalyzer(string guess)
+        // {
+        //     this.guess = guess;
+        // }
 
         public string CheckGuess(string guess)
         {
@@ -59,6 +58,7 @@ namespace WordGuesser
                     count++;
                 }
             }
+            return count;
         }
 
         public string GetFullWord()
