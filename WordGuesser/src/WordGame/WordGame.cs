@@ -3,15 +3,51 @@ namespace WordGuesser
     using System;
     using System.Collections.Generic;
 
-    public class WordGame : IWordGame
+    public class NewBaseType
     {
-
         private string fullWord;
         private int guessLimit;
         private int incorrectGuesses;
         private List<char> guesses;
         private List<char> guessedLetters;
 
+        public string CheckGuess(string guess)
+        {
+            guess = guessTrim().ToUpper();
+            if (guess.Length != 1)
+            {
+                return "You must guess a single letter";
+            }
+            if (char.IsLetter(guess[0]) == false)
+            {
+                return "You can only guess letters";
+            }
+
+            if (this.guessedLetters.Contains(guess[0])
+            {
+                return $"You've already guessed {guess}";
+            }
+
+            if (this.fullWord.Contains(guess) == false)
+            {
+                this.incorrectGuesses++;
+                this.guessedLetters.Add(guess[0]);
+                return $"Ouch! No {guess}s";
+
+            }
+            int count;
+            this.CountLetter(guess[0]);
+            if (count != 1)
+            {
+                return $"There are {count} {guess}s";
+            }
+            return $"There is 1 {guess}";
+
+        }
+    }
+
+    public class WordGame : NewBaseType, IWordGame
+    {
         public WordGame(string wordToGuess, int guessLimit)
         {
             if (guessLimit <= 0)
@@ -32,11 +68,8 @@ namespace WordGuesser
             this.incorrectGuesses = 0;
             this.guesses = new List<char>();
         }
-
-        public string CheckGuess(string guess)
-        {
-            throw new System.NotImplementedException();
-        }
+    }
+}
 
         public int CountLetter(char guess)
         {
