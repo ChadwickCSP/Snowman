@@ -10,8 +10,6 @@ namespace WordGuesser
         private int incorrectGuesses;
         private List<char> guesses;
 
-        private List<char> lettersGuessed;
-
         public WordGame(string wordToGuess, int guessLimit)
         {
             if (guessLimit <= 0)
@@ -35,32 +33,34 @@ namespace WordGuesser
 
         public string CheckGuess(string guess)
         {
+            guess = guess.Trim().ToUpper();
             if (guess.Length != 1)
             {
-                return "You must guess a single letter.";
+                return "You must guess a single letter";
             }
             else if (char.IsLetter(guess[0]) == false)
             {
                 return "You can only guess letters";
             }
-            else if (this.lettersGuessed.Contains(guess[0]))
+            else if (this.guesses.Contains(guess[0]))
             {
-                return $"You've already guessed {guess}.";
+                return $"You've already guessed {guess}";
             }
             else if (this.fullWord.Contains(guess) == false)
             {
                 this.incorrectGuesses++;
-                this.lettersGuessed.Add(guess[0]);
-                return $"Ouch. No {guess}s";
+                this.guesses.Add(guess[0]);
+                return $"Ouch! No {guess}s";
             }
 
             int count = this.CountLetter(guess[0]);
+            this.guesses.Add(guess[0]);
             if (count == 1)
             {
-                return $"There is {guess}";
+                return $"There is 1 {guess}";
             }
 
-            return $"There are {count}{guess}s";
+            return $"There are {count} {guess}s";
         }
 
         public int CountLetter(char guess)
@@ -92,7 +92,15 @@ namespace WordGuesser
 
         public string GetGuessedLetters()
         {
-            throw new System.NotImplementedException();
+            string letters;
+            letters = string.Empty;
+
+            foreach (char c in this.guesses)
+            {
+                letters += $"{c} ";
+            }
+
+            return letters.Trim();
         }
 
         public int GetGuessLimit()
