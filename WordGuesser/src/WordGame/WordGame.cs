@@ -47,9 +47,15 @@ namespace WordGuesser
             return this.fullWord;
         }
 
-        public string GetGuessedLetters()
+        public string GetGuessedLetters() // DO THIS ONE
         {
-            throw new System.NotImplementedException();
+            string letters;
+            letters = string.Empty;
+            foreach (char c in this.guesses)
+            {
+                letters += $"{c}";
+            }
+            return letters.Trim();
         }
 
         public int GetGuessLimit()
@@ -62,9 +68,9 @@ namespace WordGuesser
             return this.incorrrectGuesses;
         }
 
-        public string GetWord()
+        public string GetWord() //DO THIS ONE
         {
-            throw new System.NotImplementedException();
+            return this.fullWord;
         }
 
         public bool IsGameOver()
