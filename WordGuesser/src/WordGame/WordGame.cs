@@ -14,6 +14,9 @@ namespace WordGuesser
         private int incorrectGuesses;
         private List<char> guesses;
 
+        private List<char> lettersGuessed;
+        
+
         public WordGame(string wordToGuess, int guessLimit)
         {
             if (guessLimit <= 0)
@@ -37,12 +40,31 @@ namespace WordGuesser
 
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            if (guess.Length != 1)
+            {
+                return "You must guess a single letter.";
+            }
+            else if (char.IsLetter(guess(0) == false))
+            {
+                return "You can only guess letters";
+            }
+            else if (this.lettersGuessed.Contains(guess) = 0)
+            {
+                return $"You've already guessed {guess}.";
+            }
+            else if (this.fullWord.Contains(guess) == false)
         }
 
         public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException($"Invalid character: {guess}.");
+            }
+            else
+            {
+                char.ToUpper(guess);
+            }
         }
 
         public string GetFullWord()
@@ -54,7 +76,6 @@ namespace WordGuesser
         {
             throw new System.NotImplementedException();
         }
-
         public int GetGuessLimit()
         {
             return this.guessLimit;
