@@ -34,8 +34,6 @@ namespace WordGuesser
             this.incorrectGuesses = 0;
             this.guesses = new List<char>();
             this.guessedLetters = new List<char>();
-            word = string.Empty;
-            letters = string.Empty;
         }
 
 
@@ -56,10 +54,10 @@ namespace WordGuesser
                 return $"You've already guessed {guess}";
             }
 
+            this.guessedLetters.Add(guess[0]);
             if (this.fullWord.Contains(guess) == false)
             {
                 this.incorrectGuesses++;
-                this.guessedLetters.Add(guess[0]);
                 return $"Ouch! No {guess}s";
 
             }
@@ -102,6 +100,7 @@ namespace WordGuesser
 
         public string GetGuessedLetters()
         {
+            letters = string.Empty;
             foreach (char c in this.guessedLetters)
             {
                 letters += $" {c}";
@@ -121,6 +120,7 @@ namespace WordGuesser
 
         public string GetWord()
         {
+            word = string.Empty;
             foreach (char c in this.fullWord)
             {
                 if (this.guessedLetters.Contains(c))
