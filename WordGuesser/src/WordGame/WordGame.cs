@@ -41,7 +41,7 @@ namespace WordGuesser
 
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
+            return string.Empty;
         }
 
         public int CountLetter(char guess)
@@ -52,12 +52,11 @@ namespace WordGuesser
             }
             else
             {
-                char.ToUppter(guess);
-                guess = result;
+                guess = char.ToUpper(guess);
                 count = 0;
                 foreach (char c in this.fullWord)
                 {
-                    if (c = guess)
+                    if (c == guess)
                     {
                         count++;
                     }
