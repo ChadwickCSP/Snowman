@@ -41,7 +41,7 @@ namespace WordGuesser
 
         public string CheckGuess(string guess)
         {
-            return string.Empty;
+            
         }
 
         public int CountLetter(char guess)
