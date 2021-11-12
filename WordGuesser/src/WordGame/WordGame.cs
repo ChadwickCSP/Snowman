@@ -33,15 +33,6 @@ namespace WordGuesser
         }
          private readonly string guess;
 
-        /// <summary>
-        /// Initializes an instance of the Stringanalyzer class specifying the string to be analyzed.
-        /// </summary>
-        /// <param name="toAnalyze">The string to be analyzed.</param>
-        // public StringAnalyzer(string guess)
-        // {
-        //     this.guess = guess;
-        // }
-
         public string CheckGuess(string guess)
         {
             return this.guess;
