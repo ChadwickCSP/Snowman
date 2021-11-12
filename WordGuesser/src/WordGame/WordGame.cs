@@ -5,7 +5,6 @@ namespace WordGuesser
 
     public class WordGame : IWordGame
     {
-
         private string fullWord;
         private int guessLimit;
         private int incorrectGuesses;
@@ -39,10 +38,41 @@ namespace WordGuesser
             letters = string.Empty;
         }
 
+
         public string CheckGuess(string guess)
         {
-            
+            guess = guess.Trim().ToUpper();
+            if (guess.Length != 1)
+            {
+                return "You must guess a single letter";
+            }
+            if (char.IsLetter(guess[0]) == false)
+            {
+                return "You can only guess letters";
+            }
+
+            if (this.guessedLetters.Contains(guess[0]))
+            {
+                return $"You've already guessed {guess}";
+            }
+
+            if (this.fullWord.Contains(guess) == false)
+            {
+                this.incorrectGuesses++;
+                this.guessedLetters.Add(guess[0]);
+                return $"Ouch! No {guess}s";
+
+            }
+            int count = this.CountLetter(guess[0]);
+            if (count != 1)
+            {
+                return $"There are {count} {guess}s";
+            }
+            return $"There is 1 {guess}";
+
         }
+    
+
 
         public int CountLetter(char guess)
         {
