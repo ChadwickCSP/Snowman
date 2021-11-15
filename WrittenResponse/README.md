@@ -65,7 +65,7 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {guesses}"**
+The list is stored in the variable {guesses}.
 
 ### 3b iv.
 
@@ -79,7 +79,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: You would have to use millions of variable to keep track of all of the possible guesses.**
+Without a list, you would have to write more lines of codes to track and call the player's guesses.
 
 ## 3c.
 
@@ -130,7 +130,7 @@ count = this.CountLetter(guess[0]);
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-**The method tells us how many letters have been guessed by the player, it is used to show the player how many times they have guessed**
+This method tells how many letters have been guessed by the player, it is used to show the player how many times they've guessed.
 
 ### 3c iv.
 
@@ -148,11 +148,11 @@ Describes two calls to the procedure identified in written response 3c. Each cal
 
 First call:
 
-I call '#'
+An example would be CountLetter('.')
 
 Second call:
 
-I call 'a'
+Another example would be CountLetter('A')
 
 ### 3d ii.
 
@@ -170,7 +170,7 @@ Testing if input is a letter
 
 Result of the first call:
 
-Return invalid character with '#' displayed
+The program will return "Invalid character: .
 
 Result of the second call:
 
