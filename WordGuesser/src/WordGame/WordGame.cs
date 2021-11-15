@@ -44,8 +44,17 @@ namespace WordGuesser
                 throw new ArgumentException($"Invalid character: {guess}.");
             }
             guess = char.ToUpper(guess);
-            return 0;
-        }
+            int count;
+            count = 0;
+            foreach (char c in this.fullWord)
+            {
+                if (c == guess)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }   
 
         public string GetFullWord()
         {
