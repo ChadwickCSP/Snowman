@@ -55,8 +55,7 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+**The list is stored in the variable letters guessed. It holds the letters that the player has guessed.**
 
 ### 3b iv.
 
