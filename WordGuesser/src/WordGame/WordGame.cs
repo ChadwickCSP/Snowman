@@ -65,7 +65,7 @@ namespace WordGuesser
             }
             else
             {
-                return $"There are {count}{guess}s";
+                return $"There are {count} {guess}s";
             }
         }
 
@@ -104,7 +104,7 @@ namespace WordGuesser
             letters = string.Empty;
             foreach (char c in this.lettersGuessed)
             {
-                letters += $"{c}";
+                letters += $"{c} ";
             }
 
             return letters.Trim();
@@ -130,11 +130,11 @@ namespace WordGuesser
             {
                 if (this.lettersGuessed.Contains(c))
                 {
-                    word += $"{c}";
+                    word += $"{c} ";
                 }
                 else
                 {
-                    word += "_";
+                    word += "_ ";
                 }
             }
 
@@ -150,10 +150,10 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if (this.lettersGuessed.Contains(c))
-                {
-                    return false;
-                }
+               if (!this.lettersGuessed.Contains(c))
+               {
+                   return false;
+               }
             }
 
             return true;
