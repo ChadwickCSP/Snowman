@@ -67,31 +67,28 @@ namespace WordGuesser
             {
                 return $"There are {count}{guess}s";
             }
-
-
-
         }
 
         public int CountLetter(char guess)
         {
-                if (!char.IsLetter(guess))
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException($"Invalid Character {guess}.");
+            }
+            else
+            {
+                guess = char.ToUpper(guess);
+                int count;
+                count = 0;
+                foreach (char c in this.fullWord)
                 {
-                    throw new ArgumentException($"Invalid Character {guess}.");
-                }
-                else
-                {
-                    guess = char.ToUpper(guess);
-                    int count;
-                    count = 0;
-                    foreach (char c in this.fullWord)
+                    if (c == guess)
                     {
-                        if (c == guess)
-                        {
-                            count++;
-                        }
+                        count++;
                     }
-                    return count;
                 }
+                return count;
+            }
         }
 
         public string GetFullWord()
@@ -151,23 +148,15 @@ namespace WordGuesser
 
         public bool IsGameWon()
         {
-<<<<<<< HEAD
             foreach (char c in this.fullWord)
             {
-               if (this.lettersGuessed.Contains(c))
-               {
-                   return false;
-               }
+                if (this.lettersGuessed.Contains(c))
+                {
+                    return false;
+                }
             }
 
             return true;
         }
     }
-
-    
-=======
-            throw new System.NotImplementedException();
-        }
-    }
->>>>>>> origin/cgomez
 }
