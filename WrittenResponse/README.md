@@ -36,7 +36,26 @@ used to manage complexity in your program.
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-// TODO: Copy The line of code here for which you are adding data to a list
+        {
+                if (!char.IsLetter(guess))
+                {
+                    throw new ArgumentException($"Invalid Character {guess}.");
+                }
+                else
+                {
+                    guess = char.ToUpper(guess);
+                    int count;
+                    count = 0;
+                    foreach (char c in this.fullWord)
+                    {
+                        if (c == guess)
+                        {
+                            count++;
+                        }
+                    }
+                    return count;
+                }
+        }
 ```
 
 ### 3b ii.
@@ -46,7 +65,29 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
+{
+            // throw new System.NotImplementedException();
+            string letters;
+            letters = string.Empty;
+            foreach (char c in this.lettersGuessed)
+            {
+                letters += $"{c} ";
+            }
+
+            return letters.Trim();
+        }
+
+        public int GetGuessLimit()
+        {
+            return this.guessLimit;
+        }
+
+        public int GetIncorrectGuesses()
+        {
+            // throw new System.NotImplementedException();
+            return this.incorrectGuesses;
+        }
+
 ```
 
 ### 3b iii.
@@ -55,14 +96,13 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+The list is stored in the variable guess
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+Each letter of the guess that the player made. 
 
 ### 3b v.
 
@@ -70,8 +110,8 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+It would almost be impossible because it would be very hard for a programmer create something that is able
+to store all the individual letters, so this method of making a list of guesses is much easier. 
 
 ## 3c.
 
@@ -88,8 +128,26 @@ The first program code segment must be a student-developed procedure that:
 - [ ] Implements an algorithm that includes sequencing, selection, and iteration
 
 ```csharp
-// TODO: Select a method that meets all of the requirements.
-// I recommend your Constructor or CountLetter
+{
+                if (!char.IsLetter(guess))
+                {
+                    throw new ArgumentException($"Invalid Character {guess}.");
+                }
+                else
+                {
+                    guess = char.ToUpper(guess);
+                    int count;
+                    count = 0;
+                    foreach (char c in this.fullWord)
+                    {
+                        if (c == guess)
+                        {
+                            count++;
+                        }
+                    }
+                    return count;
+                }
+        }
 ```
 
 ### 3c ii.
@@ -97,20 +155,33 @@ The first program code segment must be a student-developed procedure that:
 The second program code segment must show where your student-developed procedure is being called in your program.
 
 ```csharp
-// TODO: Add code showing where the procedure is being called
+        {
+            // throw new System.NotImplementedException();
+            string letters;
+            letters = string.Empty;
+            foreach (char c in this.lettersGuessed)
+            {
+                letters += $"{c} ";
+            }
+
+            return letters.Trim();
+        }
 ```
 
 ### 3c iii.
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-**TODO: Explain at a high level what this method does and when it is called**
+What this does is check the guess that is provided, then after it has all the guesses, in the end the game will display how many times
+that the player guessed a letter. 
 
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-**TODO: In English, explain step by step what your procedure does. Be sure to use the word `Selection` and `Iteration` to explain what it does.**
+The program is able to display for each letter that is guessed, it will display the certain amount of guesses the player made. It will then repeat itself until
+there are no more guesses. The first segment is meant to have it where if a guess is incorrect, it will make the player re-type their guess again, until they have a valid responce 
+even if it's incorrect. Then it will take the guess and add it to the guesses that are needed for the final word. 
 
 ## 3d
 
