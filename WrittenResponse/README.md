@@ -65,7 +65,7 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-{
+        {
             // throw new System.NotImplementedException();
             string letters;
             letters = string.Empty;
@@ -76,18 +76,6 @@ in the list, as part of fulfilling the program's purpose.
 
             return letters.Trim();
         }
-
-        public int GetGuessLimit()
-        {
-            return this.guessLimit;
-        }
-
-        public int GetIncorrectGuesses()
-        {
-            // throw new System.NotImplementedException();
-            return this.incorrectGuesses;
-        }
-
 ```
 
 ### 3b iii.
@@ -96,13 +84,13 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-The list is stored in the variable guess
+The list is stored in the variable lettersGuessed
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
-Each letter of the guess that the player made. 
+Each letter of the guess that the player made
 
 ### 3b v.
 
@@ -110,8 +98,8 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-It would almost be impossible because it would be very hard for a programmer create something that is able
-to store all the individual letters, so this method of making a list of guesses is much easier. 
+It would be almost impossible because it would be hard to code a way to store every single letter in it's own area
+also it would be hard to make it fetch the guesses later in the code. 
 
 ## 3c.
 
@@ -128,7 +116,7 @@ The first program code segment must be a student-developed procedure that:
 - [ ] Implements an algorithm that includes sequencing, selection, and iteration
 
 ```csharp
-{
+        {
                 if (!char.IsLetter(guess))
                 {
                     throw new ArgumentException($"Invalid Character {guess}.");
@@ -148,6 +136,7 @@ The first program code segment must be a student-developed procedure that:
                     return count;
                 }
         }
+
 ```
 
 ### 3c ii.
@@ -166,21 +155,22 @@ The second program code segment must show where your student-developed procedure
 
             return letters.Trim();
         }
+
 ```
 
 ### 3c iii.
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-What this does is check the guess that is provided, then after it has all the guesses, in the end the game will display how many times
-that the player guessed a letter. 
+What this does is that it checks the guess that is provided to see if it's a valid guess, even before it's correct, 
+then the code will display how many times the player guessed incorrectly. 
 
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-The program is able to display for each letter that is guessed, it will display the certain amount of guesses the player made. It will then repeat itself until
-there are no more guesses. The first segment is meant to have it where if a guess is incorrect, it will make the player re-type their guess again, until they have a valid responce 
+The program is able to display for each letter that is guessed, it will display the certain amount of guesses the 
+player made. It will  then repeat itself until there are no more guesses that are left. The first segment is meant to have it where if a guess is incorrect, it will make the player re-type their guess again until they have an actual answer
 even if it's incorrect. Then it will take the guess and add it to the guesses that are needed for the final word. 
 
 ## 3d
