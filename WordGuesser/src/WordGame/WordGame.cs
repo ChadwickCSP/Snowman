@@ -9,7 +9,6 @@ namespace WordGuesser
         private List<char> lettersGuessed;
         private int incorrectGuesses;
         private int guessLimit;
-
         public WordGame(string wordToGuess, int guessLimit)
         {
             if (guessLimit <= 0)
