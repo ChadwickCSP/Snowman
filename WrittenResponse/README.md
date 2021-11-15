@@ -148,11 +148,11 @@ Describes two calls to the procedure identified in written response 3c. Each cal
 
 First call:
 
-**TODO: Complete this section**
+**"It starts by determining if the players input is a letter, if not then it returns "invalid character"."**
 
 Second call:
 
-**TODO: Complete this section**
+**"If the input is a letter the code then converts it into capital letters."**
 
 ### 3d ii.
 
@@ -160,11 +160,11 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
  
-**TODO: Complete this section**
+**Whether the players input is a letter or not.**
 
 Condition(s) tested by the second call:
 
-**TODO: Complete this section**
+**If the input is a letter**
 
 ### 3d iii.
 
