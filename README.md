@@ -565,6 +565,11 @@ There is no deliverable for Milestone 4.
 
 ## Milestone 5
 
-Complete the Snowman Game Coming Soon!
+Due: TBD
 
-Coming Soon!
+For this Milestone, you will create a simple Unity application which uses your WordGame library to
+manage the logic of the game.
+
+1. Getting Started: [LINK](Milestone%205/GettingStarted.md)
+2. Adding your Library: Coming Soon!
+3. Finishing your project: Coming Soon!
