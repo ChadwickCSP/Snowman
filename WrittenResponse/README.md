@@ -123,10 +123,16 @@ Describes two calls to the procedure identified in written response 3c. Each cal
 First call:
 
 **TODO: Complete this section**
+```csharp
+CountLetter('!')
+```
 
 Second call:
 
 **TODO: Complete this section**
+```csharp
+CountLetter('i')
+```
 
 ### 3d ii.
 
@@ -135,6 +141,9 @@ Describes what condition(s) is being tested by each call to the procedure
 Condition(s) tested by the first call:
  
 **TODO: Complete this section**
+```csharp
+fullWord = "Emiliano"
+```
 
 Condition(s) tested by the second call:
 
