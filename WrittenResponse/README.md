@@ -202,20 +202,21 @@ Describes what condition(s) is being tested by each call to the procedure
 Condition(s) tested by the first call:
  
 **TODO: Complete this section**
-```csharp
-fullWord = "Emiliano"
-```
+If there are any '!' in 'Emiliano'.
 
 Condition(s) tested by the second call:
 
 **TODO: Complete this section**
+If there are any 'i' in 'Emiliano'.
 
 ### 3d iii.
 
 Result of the first call:
 
 **TODO: Complete this section**
+Invalid Character "!"
 
 Result of the second call:
 
 **TODO: Complete this section**
+2
