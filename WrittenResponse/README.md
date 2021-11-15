@@ -46,7 +46,10 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
+foreach (char c in this.guessedLetters)
+            {
+                letters += $" {c}";
+            }
 ```
 
 ### 3b iii.
@@ -55,14 +58,13 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+"The list is stored in the variable this.guessedLetters"
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+This list contains the data of each letter the player guesses.
 
 ### 3b v.
 
@@ -70,8 +72,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+Without this list, which letters have been guessed could not be tracked and the player could just guess the same letter multiple times. Also, the game could not be won without the list because the method that decides if the game is won checks if each letter in the word that must be guessed has been guessed.
 
 ## 3c.
 
@@ -88,8 +89,26 @@ The first program code segment must be a student-developed procedure that:
 - [ ] Implements an algorithm that includes sequencing, selection, and iteration
 
 ```csharp
-// TODO: Select a method that meets all of the requirements.
-// I recommend your Constructor or CountLetter
+public int CountLetter(char guess)
+        {
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid character: {guess}.");
+            }
+            else
+            {
+                guess = char.ToUpper(guess);
+                count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
+                }
+                return count;
+            }
+        }
 ```
 
 ### 3c ii.
@@ -97,20 +116,20 @@ The first program code segment must be a student-developed procedure that:
 The second program code segment must show where your student-developed procedure is being called in your program.
 
 ```csharp
-// TODO: Add code showing where the procedure is being called
+int count = this.CountLetter(guess[0]);
 ```
 
 ### 3c iii.
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-**TODO: Explain at a high level what this method does and when it is called**
+CountLetter checks how many times a letter appears in the full word so that when the player guesses this letter, it will be accounted for however many times it is in the word and so the letter must not be guessed multiple times.
 
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-**TODO: In English, explain step by step what your procedure does. Be sure to use the word `Selection` and `Iteration` to explain what it does.**
+The method first selects if the character guessed by the player is a valid guess, specifically a letter, and if it is a letter, after making sure the program ignores the case of the letter, the method iterates through the list of characters in the word the player must guess and counts the amount of times the guess made by the player appears in the word, only if the guess is a correct one.
 
 ## 3d
 
