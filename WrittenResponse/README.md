@@ -46,7 +46,10 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
+foreach (char c in this.lettersGuessed)
+{
+    letters += $" {c}";
+}
 ```
 
 ### 3b iii.
@@ -62,7 +65,7 @@ HERE}"**
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+The list stores all of the guesses the player makes during the game.
 
 ### 3b v.
 
@@ -88,8 +91,25 @@ The first program code segment must be a student-developed procedure that:
 - [ ] Implements an algorithm that includes sequencing, selection, and iteration
 
 ```csharp
-// TODO: Select a method that meets all of the requirements.
-// I recommend your Constructor or CountLetter
+public int CountLetter(char guess)
+{
+    int count;
+    count = 0;
+    guess = char.ToUpper(guess);
+    if (!char.IsLetter(guess))
+    {
+        throw new ArgumentException("Invalid character: {guess}.");
+    }
+
+    foreach (char c in this.fullWord)
+    {
+        if (c == guess)
+        {
+            count++;
+        }
+    }
+    return count;
+}
 ```
 
 ### 3c ii.
@@ -104,7 +124,7 @@ The second program code segment must show where your student-developed procedure
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-**TODO: Explain at a high level what this method does and when it is called**
+Counts the number of times the specified character appears in the word to be guessed.  The case of the letter specified is ignored. It's called when a guess is made and check guess is running.
 
 ### 3c iv.
 

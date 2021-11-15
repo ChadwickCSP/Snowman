@@ -18,7 +18,7 @@
             WordSelector selector = new WordSelector(dictionary, new Random());
 
             // TODO: Replace with your constructor
-            IWordGame game = null;
+            IWordGame game = new WordGame(selector.GetWord(), 5);
 
             while (game.IsGameWon() == false && game.IsGameOver() == false)
             {
