@@ -1,5 +1,25 @@
 # Milestone 5
 
+- [Milestone 5](#milestone-5)
+  - [Before Starting](#before-starting)
+  - [Getting Started](#getting-started)
+    - [Create a Repository](#create-a-repository)
+    - [Create a 2D Unity Project](#create-a-2d-unity-project)
+    - [Commit the initial project](#commit-the-initial-project)
+    - [Configuring Unity to use VS Code](#configuring-unity-to-use-vs-code)
+  - [Unity Basics](#unity-basics)
+    - [Overview](#overview)
+    - [Specifying the View Port Dimensions](#specifying-the-view-port-dimensions)
+    - [Add a Text Element to your Scene](#add-a-text-element-to-your-scene)
+    - [Changing the Text Properties](#changing-the-text-properties)
+    - [Add a Background Image](#add-a-background-image)
+    - [Add a Button](#add-a-button)
+    - [Adding a Script](#adding-a-script)
+    - [Opening the Script in VS Code](#opening-the-script-in-vs-code)
+    - [Adding References to the Scene Elements](#adding-references-to-the-scene-elements)
+    - [Writing a StartGame() method](#writing-a-startgame-method)
+    - [Running your program](#running-your-program)
+
 ## Before Starting
 
 Before starting, you should install Unity Hub and Unity 2020.3. If you are on Mac, you should 
