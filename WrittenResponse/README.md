@@ -61,7 +61,7 @@ Identifies the name of the list being used in this response
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+**The list holds the letters that the player has guessed.**
 
 ### 3b v.
 
@@ -119,32 +119,23 @@ Provide a written response that does all three of the following:
 
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
-First call:
+First call: I would call CountLetter with the number 3
 
-**TODO: Complete this section**
-
-Second call:
-
-**TODO: Complete this section**
+Second call: I would call CountLetter with the letter L
 
 ### 3d ii.
 
 Describes what condition(s) is being tested by each call to the procedure
 
-Condition(s) tested by the first call:
+Condition(s) tested by the first call: The first call checks if the user inputs a character that is not a letter. 
  
-**TODO: Complete this section**
 
-Condition(s) tested by the second call:
+Condition(s) tested by the second call: The second call checks if the user inputs a character that is a letter
 
-**TODO: Complete this section**
 
 ### 3d iii.
 
-Result of the first call:
+Result of the first call: The result of the first call is an error saying "Invalid Character"
 
-**TODO: Complete this section**
 
-Result of the second call:
-
-**TODO: Complete this section**
+Result of the second call: The result of the second call is the number of times that the letter L appears in the word. 
