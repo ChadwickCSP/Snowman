@@ -194,6 +194,10 @@ of your own work.
    `jcollard`
     * **Do not click Publish Changes yet!**
 
+You can tell which branch you're on in the bottom left corner of VS Code:
+
+![Which Branch](support/whichBranch.png)
+
 4. Add your name to the `Authors` Section of the WordGuesser/README.md document.
    * Note: Only add your individual name, do not add your entire teams name.
 
