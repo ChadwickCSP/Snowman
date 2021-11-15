@@ -10,7 +10,10 @@ Gretchen Deutsch
 
 ## Member Variables
 
-TODO: List your member variables here
+List<char> guessedLetters;
+int incorrectGuessCount;
+int guessLimit;
+string wordToGuess;
 
 ## Constructors
 

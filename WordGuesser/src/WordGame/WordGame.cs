@@ -31,27 +31,44 @@ namespace WordGuesser
             this.guessLimit = guessLimit;
             this.incorrectGuesses = 0;
             this.lettersGuessed = new List<char>();
-
         }
-
         public string CheckGuess(string guess)
         {
-            throw new System.NotImplementedException();
-        }
+            guess = guess.Trim().ToUpper();
 
-        public int CountLetter(char guess)
-        {
-            throw new System.NotImplementedException();
+            if (guess.Length != 1)
+            {
+                return "You must guess a single letter";
+            }
+            else if (char.IsLetter(guess[0]) == false)
+            {
+                return "You can only guess letters";
+            }
+            else if (this.lettersGuessed.Contains(guess[0]))
+            {
+                return $"You've already guessed {guess}";
+            }
+            else if (this.fullWord.Contains(guess) == false)
+            {
+                this.incorrectGuesses++;
+                this.lettersGuessed.Add(guess[0]);
+                return $"Ouch! No {guess}s";
+            }
+            int count;
+            count = this.CountLetter(guess[0]);
+            this.lettersGuessed.Add(guess[0]);
+            if (count == 1)
+            {
+                return $"There is 1 {guess}";
+            }
+
+            return $"There are {count} {guess}s";
+
         }
 
         public string GetFullWord()
         {
             return this.fullWord;
-        }
-
-        public string GetGuessedLetters()
-        {
-            throw new System.NotImplementedException();
         }
 
         public int GetGuessLimit()
@@ -64,9 +81,44 @@ namespace WordGuesser
             return this.incorrectGuesses;
         }
 
-        public string GetWord()
+        public int CountLetter(char guess)
         {
-            throw new System.NotImplementedException();
+
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid Character: {guess}.");
+            }
+            else
+            {
+
+
+                guess = char.ToUpper(guess);
+
+                int count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
+
+                }
+                return count;
+
+
+            }
+
+        }
+
+        public string GetGuessedLetters()
+        {
+
+            string letters = string.Empty;
+            foreach (char c in this.lettersGuessed)
+            {
+                letters += $" {c}";
+            }
+            return letters.Trim();
         }
 
         public bool IsGameOver()
@@ -78,7 +130,7 @@ namespace WordGuesser
         {
             foreach (char c in this.fullWord)
             {
-                if (this.lettersGuessed.Contains(c))
+                if (!this.lettersGuessed.Contains(c))
                 {
                     return false;
                 }
@@ -86,5 +138,23 @@ namespace WordGuesser
 
             return true;
         }
+
+        public string GetWord()
+        {
+            string word = string.Empty;
+            foreach (char c in this.fullWord)
+            {
+                if (this.lettersGuessed.Contains(c))
+                {
+                    word += $"{c} ";
+                }
+                else
+                {
+                    word += "_ ";
+                }
+            }
+            return word.Trim();
+        }
+
     }
 }
