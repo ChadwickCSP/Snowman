@@ -67,7 +67,7 @@ You should download an install Unity Hub and Unity 2020.3.21f as homework.
 
 First Download Unity Hub:
 * Window: [LINK](https://unity3d.com/get-unity/download)
-* Mac: [LINK](https://drive.google.com/file/d/
+* Mac: [LINK](https://drive.google.com/file/d/1PHnpMFkHKqsxEiO2TEJUjf58BP3tVZNY/view)
 
 Then follow the setup instructions here: [LINK](UnitySetup/README.md)
 
