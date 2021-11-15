@@ -140,31 +140,62 @@ Provide a written response that does all three of the following:
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
 First call:
+ ```csharp
+guess = "."
+```
+This call tells the code that the players guess is a period ".".
 
-**TODO: Complete this section**
 
 Second call:
-
-**TODO: Complete this section**
+ ```csharp
+guess = "d"
+```
+This call tells the code that the players guess is a d "d".
 
 ### 3d ii.
 
 Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
+If the player guesses a non-letter such as a period " . " the code would run this:
+```csharp
+if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid character: {guess}.");
+            }
+```
+which tells the player that their guess is invalid due to it not being a character.
  
-**TODO: Complete this section**
+
 
 Condition(s) tested by the second call:
 
-**TODO: Complete this section**
+If the player guesses a real letter such as a "d" this piece of code would run:
+ ```csharp
+ else
+            {
+                guess = char.ToUpper(guess);
+                count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
+                }
+                return count;
+            }
+```
+
+
 
 ### 3d iii.
 
 Result of the first call:
+The result of the first call is a message to the player telling them that their guess is invalid due to it not being a character
 
-**TODO: Complete this section**
+
 
 Result of the second call:
+The result of the second call is the number of that letter that appears in the word that the player is trying to guess.
 
-**TODO: Complete this section**
