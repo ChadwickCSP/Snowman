@@ -148,11 +148,11 @@ Describes two calls to the procedure identified in written response 3c. Each cal
 
 First call:
 
-**"It starts by determining if the players input is a letter, if not then it returns "invalid character"."**
+I call '#'
 
 Second call:
 
-**"If the input is a letter the code then converts it into capital letters."**
+I call 'a'
 
 ### 3d ii.
 
@@ -160,18 +160,18 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
  
-**Whether the players input is a letter or not.**
+Testing if input is not a letter.
 
 Condition(s) tested by the second call:
 
-**If the input is a letter**
+Testing if input is a letter
 
 ### 3d iii.
 
 Result of the first call:
 
-**TODO: Complete this section**
+Return invalid character with '#' displayed
 
 Result of the second call:
 
-**TODO: Complete this section**
+Assume the word is apple, the program will return the number 1.
