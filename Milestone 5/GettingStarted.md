@@ -106,7 +106,7 @@ To track files that should not be added to a repository, we can use a file calle
 
 ![Moved Gitignore](images/MovedGitIgnore.png)
 
-3. Commit and Push your changes.
+3. Commit and Push your changes. Note: The image below should be clicking the Add all button not just the add button for `.gitignore`
 
 ![Commit and Push](images/CommitAndPush.png)
 
@@ -114,7 +114,7 @@ To track files that should not be added to a repository, we can use a file calle
 
 The last thing we need to do before we can start working with Unity is to configure it to use VS Code as a script editor.
 
-1. Go back to the VS Code editor. 
+1. Go back to the Unity editor. 
 2. Open the `Preferences` Menu.
     * On Mac, from the top menu, select `Unity` > `Preferences`
     * On Windows, from the top menu, select `Edut` > `Preferences`
