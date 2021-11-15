@@ -16,6 +16,7 @@ This project will count as 2 grades:
     - [.NET Core Test Explorer](#net-core-test-explorer)
     - [Markdown All in One](#markdown-all-in-one)
     - [Unity 2020.3.21f / Unity Hub](#unity-2020321f--unity-hub)
+    - [Mono (Mac Only)](#mono-mac-only)
   - [Project Setup](#project-setup)
     - [Fork Repository](#fork-repository)
     - [Manage Access](#manage-access)
@@ -41,6 +42,7 @@ This project will count as 2 grades:
   - [Milestone 3](#milestone-3)
     - [Deliverable](#deliverable-2)
   - [Milestone 4](#milestone-4)
+    - [Deliverable](#deliverable-3)
   - [Milestone 5](#milestone-5)
 
 ## Required Software
@@ -63,7 +65,17 @@ Get it from the VS Code Market Place:
 
 You should download an install Unity Hub and Unity 2020.3.21f as homework.
 
-Coming soon: A video on completing the Unity installation
+First Download Unity Hub:
+* Window: [LINK](https://unity3d.com/get-unity/download)
+* Mac: [LINK](https://drive.google.com/file/d/1PHnpMFkHKqsxEiO2TEJUjf58BP3tVZNY/view)
+
+Then follow the setup instructions here: [LINK](UnitySetup/README.md)
+
+### Mono (Mac Only)
+
+If you are on Mac, you will need to install a program called Mono which is software that allows you to run older C# code.
+
+Download it here: [LINK](https://drive.google.com/file/d/1-szuBcnWh8CILQeJA-2EacNADaW4mxb-/view?usp=sharing)
 
 ## Project Setup
 
@@ -538,13 +550,26 @@ Unity.
 To do this, you must download and install Unity. For this project, we will be using
 Unity 2020.3. To do this, first you will install Unity Hub.
 
-Window: [LINK](https://unity3d.com/get-unity/download)
-Mac: [LINK](https://drive.google.com/file/d/1PHnpMFkHKqsxEiO2TEJUjf58BP3tVZNY/view?usp=sharing)
+* Windows: [LINK](https://unity3d.com/get-unity/download)
+* Mac: [LINK](https://drive.google.com/file/d/1PHnpMFkHKqsxEiO2TEJUjf58BP3tVZNY/view?usp=sharing)
 
 Unity Setup Instructions: [LINK](UnitySetup/README.md)
 
+If you are on Mac, you will also need to have software called Mono installed.
+
+You can download the installer here: [LINK](https://drive.google.com/file/d/1-szuBcnWh8CILQeJA-2EacNADaW4mxb-/view?usp=sharing)
+
+### Deliverable
+
+There is no deliverable for Milestone 4.
+
 ## Milestone 5
 
-Complete the Snowman Game Coming Soon!
+Due: TBD
 
-Coming Soon!
+For this Milestone, you will create a simple Unity application which uses your WordGame library to
+manage the logic of the game.
+
+1. Getting Started: [LINK](Milestone%205/GettingStarted.md)
+2. Adding your Library: Coming Soon!
+3. Finishing your project: Coming Soon!
