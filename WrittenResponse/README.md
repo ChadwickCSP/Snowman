@@ -55,14 +55,13 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+ "The list is stored in the variable {this.lettersGuessed}"
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+In the list, the different guesses the player makes are stored. 
 
 ### 3b v.
 
@@ -70,8 +69,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+Without the ability to store each guess the player makes, the code could not keep track of how many guesses were made or if you already guessed a specific letter. The code would then probably have to ask if each individual letter was already guessed which would make the code much longer and more complex than it needs to be. 
 
 ## 3c.
 
