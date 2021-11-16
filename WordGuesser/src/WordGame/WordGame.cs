@@ -47,9 +47,19 @@ namespace WordGuesser
             {
                 return $"You've already guessed {guess}";
             }
-            return "";
+            else if (this.fullWord.Contains(guess) == false)
+            {
+                this.incorrectGuesses++;
+                this.lettersGuessed.Add(guess[0]);
+                return $"Ouch! No {guess}s";
+            }
+            int count = this.CountLetter(guess[0]);
+            if (count == 1)
+            {
+                return $"There is 1 {guess}";
+            }
+            return $"There are {count} {guess}s";
         }
-
 
         public int CountLetter(char guess)
         {
