@@ -1,6 +1,6 @@
-# Milestone 5
+# Milestone 5: Getting Started
 
-- [Milestone 5](#milestone-5)
+- [Milestone 5: Getting Started](#milestone-5-getting-started)
   - [Before Starting](#before-starting)
   - [Getting Started](#getting-started)
     - [Create a Repository](#create-a-repository)
@@ -19,6 +19,7 @@
     - [Adding References to the Scene Elements](#adding-references-to-the-scene-elements)
     - [Writing a StartGame() method](#writing-a-startgame-method)
     - [Running your program](#running-your-program)
+  - [First Challenge](#first-challenge)
 
 ## Before Starting
 
@@ -410,3 +411,6 @@ Now you're ready to test your program.
 
 Congratulations! You have learned how to add text, images, and buttons to a Unity Scene. You have also learned how to add controls to your buttons and modify the scene elements within a script.
 
+## First Challenge
+
+You should now be ready to continue to the [First Challenge](1_FirstChallenge.md)
