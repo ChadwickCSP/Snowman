@@ -64,14 +64,14 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+**The list is stored in the variable letters guessed. It holds the letters that the player has guessed.**
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
 In this list we are storing all the letter that the player has guessed
+**The list holds the letters that the player has guessed.**
 
 ### 3b v.
 
@@ -157,33 +157,23 @@ Provide a written response that does all three of the following:
 
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
-First call: 
+First call: I would call CountLetter with the number 3
 
-A call might be CountLetter('4')
-
-Second call:
-
-A call might be CountLetter('S')
+Second call: I would call CountLetter with the letter L
 
 ### 3d ii.
 
 Describes what condition(s) is being tested by each call to the procedure
 
-Condition(s) tested by the first call:
+Condition(s) tested by the first call: The first call checks if the user inputs a character that is not a letter. 
  
-If the player entered something that was not a letter.
 
-Condition(s) tested by the second call:
+Condition(s) tested by the second call: The second call checks if the user inputs a character that is a letter
 
-If the player entered something that is a letter.
 
 ### 3d iii.
 
-Result of the first call:
+Result of the first call: The result of the first call is an error saying "Invalid Character"
 
-The result would be an error saying "Invalid character: {guess}." 
 
-Result of the second call:
-
-Assuming the word being guessed is suspect, this would result in the number 2. 
-
+Result of the second call: The result of the second call is the number of times that the letter L appears in the word. 
