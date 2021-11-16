@@ -36,8 +36,8 @@ used to manage complexity in your program.
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-// TODO: Copy The line of code here for which you are adding data to a list
-```
+ 
+ else if (char.IsLetter(guess[0]) == false)
 
 ### 3b ii.
 
@@ -46,8 +46,8 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
-```
+
+ foreach (char c in this.lettersGuessed)
 
 ### 3b iii.
 
