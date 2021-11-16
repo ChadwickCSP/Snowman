@@ -31,13 +31,19 @@ Capture and paste two program code segments you developed during the
 administration of this task that contain a list (or other collection type) being
 used to manage complexity in your program.
 
+
+
 ### 3b i.
 
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-// TODO: Copy The line of code here for which you are adding data to a list
+ this.lettersGuessed = new List<char>();
+ 
 ```
+```csharp
+ this.lettersGuessed.Add(guess[0]);
+ ```
 
 ### 3b ii.
 
@@ -62,7 +68,7 @@ HERE}"**
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+In this list we are storing all the letter that the player has guessed
 
 ### 3b v.
 
@@ -88,8 +94,28 @@ The first program code segment must be a student-developed procedure that:
 - [ ] Implements an algorithm that includes sequencing, selection, and iteration
 
 ```csharp
-// TODO: Select a method that meets all of the requirements.
-// I recommend your Constructor or CountLetter
+public int CountLetter(char guess)
+        {
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid character: {guess}.");
+            }
+            else
+            {
+                guess = char.ToUpper(guess);
+                int count;
+                count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
+                }
+                return count;
+            }
+        }
+
 ```
 
 ### 3c ii.
@@ -97,7 +123,7 @@ The first program code segment must be a student-developed procedure that:
 The second program code segment must show where your student-developed procedure is being called in your program.
 
 ```csharp
-// TODO: Add code showing where the procedure is being called
+ count = this.CountLetter(guess[0]);
 ```
 
 ### 3c iii.
