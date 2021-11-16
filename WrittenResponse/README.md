@@ -46,7 +46,10 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
+foreach (char c in this.lettersGuessed)
+            {
+                letters += $"{c} ";
+            }
 ```
 
 ### 3b iii.
@@ -69,8 +72,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+If the list was not used, an infinite amount of variables would need to be made to keep track of the infinite guesses a player could make. This would make writing the code impossible since infinite variables can not be made, so the only other option would be to limit the players guesses. Creating a list is the most convenient way to track all the players guessed without limiting the amount of guesses a player can have.
 
 ## 3c.
 
@@ -103,13 +105,22 @@ The second program code segment must show where your student-developed procedure
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-**TODO: Explain at a high level what this method does and when it is called**
+This procedure counts the number of times a character is in the word trying to be guessed. For example: if the generated word was pizza, and the character was z, the procedure would return 2. This is used to determine how many times, if at all, the letter appears in teh word. 
+
 
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
 **TODO: In English, explain step by step what your procedure does. Be sure to use the word `Selection` and `Iteration` to explain what it does.**
+
+1. The algorithm checks that `guess` is a letter and if it is not it throws an `ArgumentException`.
+2. It makes the `guess` character uniform by making it all upper case.
+3. Initializes and integer to count the amount of appearances of a letter in the word.
+4. Iterate through every character in the word that is being guessed.
+    * If the character appears in the word increment the count.
+5. After checking every letter, return the count. 
+
 
 ## 3d
 
