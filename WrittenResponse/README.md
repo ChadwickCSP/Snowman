@@ -152,11 +152,11 @@ Describes two calls to the procedure identified in written response 3c. Each cal
 
 First call:
 
-**TODO: Complete this section**
+This code makes the player's guess uppercase.
 
 Second call:
 
-**TODO: Complete this section**
+The count increments when the guess is part of the word 
 
 ### 3d ii.
 
@@ -164,18 +164,18 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
  
-**TODO: Complete this section**
+Is the guess a letter
 
 Condition(s) tested by the second call:
 
-**TODO: Complete this section**
+How many times is the guess part of the word.
 
 ### 3d iii.
 
 Result of the first call:
 
-**TODO: Complete this section**
+The player's guess is sanitized and uppercase.
 
 Result of the second call:
 
-**TODO: Complete this section**
+The number of times a guessed letter appears in the word has been determined and stored
