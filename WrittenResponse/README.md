@@ -120,32 +120,32 @@ Provide a written response that does all three of the following:
 
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
-First call:
+First call: 
 
-**TODO: Complete this section**
+CountLetter('#')
 
 Second call:
 
-**TODO: Complete this section**
+CountLetter('D')
+
 
 ### 3d ii.
 
 Describes what condition(s) is being tested by each call to the procedure
 
-Condition(s) tested by the first call:
+Condition(s) tested by the first call: The condition tested by the first call is checking if the input isn't a letter. 
  
-**TODO: Complete this section**
 
 Condition(s) tested by the second call:
 
-**TODO: Complete this section**
+The second condition that is tested is checking if it is a letter and counting the number of times it shows up
 
 ### 3d iii.
 
-Result of the first call:
+Result of the first call: Throws an error
 
-**TODO: Complete this section**
 
-Result of the second call:
 
-**TODO: Complete this section**
+Result of the second call: Spits out the number of times the letter shows up. 
+
+
