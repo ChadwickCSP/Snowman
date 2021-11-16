@@ -161,4 +161,4 @@ this prints "Invalid character: {guess}."
 Result of the second call:
 ``` 
 this runs a the char value through a foreach loop which checks if the guessed value was in our wordToGuess variable. If it is, then the count var is increased, the program then returns count regardless if the foreach loop is confirmed. 
-```
+``` 
