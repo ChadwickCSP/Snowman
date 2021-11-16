@@ -116,17 +116,20 @@ namespace WordGuesser
             return this.incorrectGuesses;
         }
         // Hudson's Methods
-        public string GetWord()
+        public string GetWord() 
         {
             string word;
             word = string.Empty;
-            foreach(char c in this.fullWord)
+            foreach (char c in this.fullWord)
             {
                 if (this.guesses.Contains(c))
                 {
-                    word +=$"{c}";
+                    word += $"{c} ";
                 }
-                word += "_ ";
+                else
+                {
+                    word += "_ ";
+                }
             }
             return word.Trim();
         }
