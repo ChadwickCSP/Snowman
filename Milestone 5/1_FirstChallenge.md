@@ -36,7 +36,7 @@ When you're done, it should look something like this:
 ![Play Screen Canvas Component](images/PlayScreenCanvasComponent.png)
 
 6. Create an image to be the new background for the `Play Screen`
-   * You may use any image, including these: [LINK](../backgrounds/) 
+   * You may use any image, including these: [LINK](./backgrounds/) 
 7.  Add a `Back` Button to the Play Screen
 
 When you're finished, your hierarchy should look like similar to this:
