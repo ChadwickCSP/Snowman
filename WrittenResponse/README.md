@@ -36,7 +36,7 @@ used to manage complexity in your program.
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-// TODO: Copy The line of code here for which you are adding data to a list
+this.guesses.Add(guess[0]);
 ```
 
 ### 3b ii.
@@ -46,7 +46,10 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
+  foreach (char c in this.guesses)
+            {
+                letters += $"{c} ";
+            }
 ```
 
 ### 3b iii.
@@ -55,14 +58,13 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+**The list is stored in the variable guesses.**
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+**This list stores the letters guessed and then displays each character.**
 
 ### 3b v.
 
@@ -70,8 +72,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+**TODO: it would be very difficult to write the guessing game without using the list. With out a list we would have to define a bo\ol variable for each individual letter that is set to false, and when the player guesses that letter the bool would be set true. At the end of the game when the program return every letter the player has guessed the program would have to check if each of our bool variables are set to true. Then the program would return the true bools as char guessed. 
 
 ## 3c.
 
@@ -185,11 +186,21 @@ Provide a written response that does all three of the following:
 
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
-First call:
+First call: 
+```csharp
+count = a non char value
+count = this.CountLetter(guess[0]);
+```
 
 **TODO: Complete this section**
 
 Second call:
+```csharp
+count = a char value
+count = this.CountLetter(guess[0]);
+```
+
+
 
 **TODO: Complete this section**
 
@@ -199,9 +210,10 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
  
-**TODO: Complete this section**
+this calls if the player input a value other than a char type 
 
 Condition(s) tested by the second call:
+this calls if the input of the value is a char value
 
 **TODO: Complete this section**
 
@@ -209,8 +221,11 @@ Condition(s) tested by the second call:
 
 Result of the first call:
 
-**TODO: Complete this section**
+```
+this prints "Invalid character: {guess}."
+```
 
 Result of the second call:
-
-**TODO: Complete this section**
+``` 
+this runs a the char value through a foreach loop which checks if the guessed value was in our wordToGuess variable. If it is, then the count var is increased, the program then returns count regardless if the foreach loop is confirmed. 
+``` 
