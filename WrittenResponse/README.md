@@ -86,8 +86,34 @@ The first program code segment must be a student-developed procedure that:
 - [ ] Implements an algorithm that includes sequencing, selection, and iteration
 
 ```csharp
-// TODO: Select a method that meets all of the requirements.
-// I recommend your Constructor or CountLetter
+public int CountLetter(char guess)
+        {
+
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid Character: {guess}.");
+            }
+            else
+            {
+
+
+                guess = char.ToUpper(guess);
+
+                int count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
+
+                }
+                return count;
+
+
+            }
+
+        }
 ```
 
 ### 3c ii.
@@ -95,20 +121,20 @@ The first program code segment must be a student-developed procedure that:
 The second program code segment must show where your student-developed procedure is being called in your program.
 
 ```csharp
-// TODO: Add code showing where the procedure is being called
+            count = this.CountLetter(guess[0]);
 ```
 
 ### 3c iii.
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-**TODO: Explain at a high level what this method does and when it is called**
+This method counts the number of times a letter appears in the word.
 
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-**TODO: In English, explain step by step what your procedure does. Be sure to use the word `Selection` and `Iteration` to explain what it does.**
+The procedure makes a selection on whether the guess inputted is a letter in the word. If the guess is not in the word, the program displays "Invalid Guess: {guess}." If the guess is in the word it, the procedure counts how many times thee guessed letter appears.
 
 ## 3d
 
