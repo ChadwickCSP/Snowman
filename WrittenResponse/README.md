@@ -36,7 +36,7 @@ used to manage complexity in your program.
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-// TODO: Copy The line of code here for which you are adding data to a list
+this.guesses.Add(guess[0]);
 ```
 
 ### 3b ii.
@@ -46,7 +46,10 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
+  foreach (char c in this.guesses)
+            {
+                letters += $"{c} ";
+            }
 ```
 
 ### 3b iii.
@@ -55,14 +58,13 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+**The list is stored in the variable guesses.**
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+**This list stores the letters guessed and then displays each character.**
 
 ### 3b v.
 
