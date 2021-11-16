@@ -72,8 +72,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+**TODO: it would be very difficult to write the guessing game without using the list. With out a list we would have to define a bo\ol variable for each individual letter that is set to false, and when the player guesses that letter the bool would be set true. At the end of the game when the program return every letter the player has guessed the program would have to check if each of our bool variables are set to true. Then the program would return the true bools as char guessed. 
 
 ## 3c.
 
@@ -122,11 +121,21 @@ Provide a written response that does all three of the following:
 
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
-First call:
+First call: 
+```csharp
+count = a non char value
+count = this.CountLetter(guess[0]);
+```
 
 **TODO: Complete this section**
 
 Second call:
+```csharp
+count = a char value
+count = this.CountLetter(guess[0]);
+```
+
+
 
 **TODO: Complete this section**
 
@@ -136,9 +145,10 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
  
-**TODO: Complete this section**
+this calls if the player input a value other than a char type 
 
 Condition(s) tested by the second call:
+this calls if the input of the value is a char value
 
 **TODO: Complete this section**
 
@@ -146,8 +156,11 @@ Condition(s) tested by the second call:
 
 Result of the first call:
 
-**TODO: Complete this section**
+```
+this prints "Invalid character: {guess}."
+```
 
 Result of the second call:
-
-**TODO: Complete this section**
+``` 
+this runs a the char value through a foreach loop which checks if the guessed value was in our wordToGuess variable. If it is, then the count var is increased, the program then returns count regardless if the foreach loop is confirmed. 
+``` 
