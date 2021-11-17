@@ -570,7 +570,7 @@ Due: TBD
 For this Milestone, you will create a simple Unity application which uses your WordGame library to
 manage the logic of the game.
 
-1. [Getting Started](0_GettingStarted.md)
-2. [First Challenge](1_FirstChallenge.md)
-3. [Adding the WordGame Library](2_AddingLibrary.md)
-4. [Second Challenge: Creating the Play Scene](3_SecondChallenge.md)
+1. [Getting Started](Milestone%205/0_GettingStarted.md)
+2. [First Challenge](Milestone%205/1_FirstChallenge.md)
+3. [Adding the WordGame Library](Milestone%205/2_AddingLibrary.md)
+4. [Second Challenge: Creating the Play Scene](Milestone%205/3_SecondChallenge.md)
