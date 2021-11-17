@@ -3,6 +3,7 @@ namespace WordGuesser
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
 
     /// <summary>
     /// A class for generating random words.
@@ -11,6 +12,30 @@ namespace WordGuesser
     {
         private readonly string[] dictionary;
         private readonly Random randomGenerator;
+
+        /// <summary>
+        /// Given a string, splits it on white space and uses the resulting
+        /// words as a dictionary.
+        /// </summary>
+        /// <param name="toLoad">The string of words to use.</param>
+        /// <returns>A WordSelector with the specified dictionary.</returns>
+        public static WordSelector LoadFromString(string toLoad)
+        {
+            ISet<string> words = new HashSet<string>();
+
+            foreach (string word in toLoad.Split().ToList())
+            {
+                string trimmedWord = word.Trim();
+                if (trimmedWord == string.Empty)
+                {
+                    continue;
+                }
+
+                words.Add(trimmedWord);
+            }
+
+            return new WordSelector(words.ToList(), new Random());
+        }
 
         /// <summary>
         /// Initializes an instance of the WordSelector class specifying the path to a
@@ -106,7 +131,13 @@ namespace WordGuesser
             // TODO: Throw exception if no words match?
             List<string> possibleWords = this.GetDictionary(filters);
             int ix = this.randomGenerator.Next(possibleWords.Count);
-            return possibleWords[ix];
+
+            if (possibleWords[ix].Trim() == string.Empty)
+            {
+                return this.GetWord(filters);
+            }
+
+            return possibleWords[ix].Trim();
         }
     }
 }
