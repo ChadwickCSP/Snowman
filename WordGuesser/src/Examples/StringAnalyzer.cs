@@ -8,6 +8,7 @@ namespace Examples
     public class StringAnalyzer
     {
         private readonly string toAnalyze;
+        private string fullWord;
 
         /// <summary>
         /// Initializes an instance of the Stringanalyzer class specifying the string to be analyzed.
@@ -132,5 +133,6 @@ namespace Examples
             // If none of the characters are a letter, return false.
             return false;
         }
+
     }
 }

@@ -36,8 +36,8 @@ used to manage complexity in your program.
 The first program code segment must show how data have been stored in the list.
 
 ```csharp
-// TODO: Copy The line of code here for which you are adding data to a list
-```
+ 
+ else if (char.IsLetter(guess[0]) == false)
 
 ### 3b ii.
 
@@ -46,8 +46,8 @@ such as creating new data from the existing data or accessing multiple elements
 in the list, as part of fulfilling the program's purpose.
 
 ```csharp
-// TODO: Show a foreach loop accessing each element of the list from 3bi
-```
+
+ foreach (char c in this.lettersGuessed)
 
 ### 3b iii.
 
@@ -55,14 +55,13 @@ Then provide a written response that does all three of the following:
 
 Identifies the name of the list being used in this response
 
-**TODO: Write, "The list is stored in the variable {INSERT VARIABLE NAME
-HERE}"**
+ "The list is stored in the variable {this.lettersGuessed}"
 
 ### 3b iv.
 
 Describes what the data contained in the list represents in your program
 
-**TODO: Write a sentence describing what is stored in the list**
+In the list, the different guesses the player makes are stored. 
 
 ### 3b v.
 
@@ -70,8 +69,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-**TODO: Explain why it would be very difficult (or impossible) to write 
-the guessing game without using the list.**
+Without the ability to store each guess the player makes, the code could not keep track of how many guesses were made or if you already guessed a specific letter. The code would then probably have to ask if each individual letter was already guessed which would make the code much longer and more complex than it needs to be. 
 
 ## 3c.
 
@@ -88,8 +86,34 @@ The first program code segment must be a student-developed procedure that:
 - [ ] Implements an algorithm that includes sequencing, selection, and iteration
 
 ```csharp
-// TODO: Select a method that meets all of the requirements.
-// I recommend your Constructor or CountLetter
+public int CountLetter(char guess)
+        {
+
+            if (!char.IsLetter(guess))
+            {
+                throw new ArgumentException("Invalid Character: {guess}.");
+            }
+            else
+            {
+
+
+                guess = char.ToUpper(guess);
+
+                int count = 0;
+                foreach (char c in this.fullWord)
+                {
+                    if (c == guess)
+                    {
+                        count++;
+                    }
+
+                }
+                return count;
+
+
+            }
+
+        }
 ```
 
 ### 3c ii.
@@ -97,20 +121,20 @@ The first program code segment must be a student-developed procedure that:
 The second program code segment must show where your student-developed procedure is being called in your program.
 
 ```csharp
-// TODO: Add code showing where the procedure is being called
+            count = this.CountLetter(guess[0]);
 ```
 
 ### 3c iii.
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
-**TODO: Explain at a high level what this method does and when it is called**
+This method counts the number of times a letter appears in the word.
 
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-**TODO: In English, explain step by step what your procedure does. Be sure to use the word `Selection` and `Iteration` to explain what it does.**
+The procedure makes a selection on whether the guess inputted is a letter in the word. If the guess is not in the word, the program displays "Invalid Guess: {guess}." If the guess is in the word it, the procedure counts how many times thee guessed letter appears.
 
 ## 3d
 
@@ -120,32 +144,32 @@ Provide a written response that does all three of the following:
 
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
-First call:
+First call: 
 
-**TODO: Complete this section**
+CountLetter('#')
 
 Second call:
 
-**TODO: Complete this section**
+CountLetter('D')
+
 
 ### 3d ii.
 
 Describes what condition(s) is being tested by each call to the procedure
 
-Condition(s) tested by the first call:
+Condition(s) tested by the first call: The condition tested by the first call is checking if the input isn't a letter. 
  
-**TODO: Complete this section**
 
 Condition(s) tested by the second call:
 
-**TODO: Complete this section**
+The second condition that is tested is checking if it is a letter and counting the number of times it shows up
 
 ### 3d iii.
 
-Result of the first call:
+Result of the first call: Throws an error
 
-**TODO: Complete this section**
 
-Result of the second call:
 
-**TODO: Complete this section**
+Result of the second call: Spits out the number of times the letter shows up. 
+
+
