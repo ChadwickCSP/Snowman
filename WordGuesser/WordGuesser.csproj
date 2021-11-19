@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>library</OutputType>
     <!-- Include both net5.0 so we can debug in VSCode but enfore 4.7.1 rules -->
     <TargetFrameworks>net5.0;net4.7.1</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
