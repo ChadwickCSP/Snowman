@@ -143,10 +143,12 @@ Describes two calls to the procedure identified in written response 3c. Each cal
 First call:
 
 **TODO: Complete this section**
+The first call, I will use 9.
 
 Second call:
 
 **TODO: Complete this section**
+The second call, I will use h.
 
 ### 3d ii.
 
@@ -155,17 +157,21 @@ Describes what condition(s) is being tested by each call to the procedure
 Condition(s) tested by the first call:
  
 **TODO: Complete this section**
+When I pass in 9, I am testing that the code will produce an error if I do not pass a letter.
 
 Condition(s) tested by the second call:
 
 **TODO: Complete this section**
+When I pass in h, I am testing that the code will count the number of h in the word.
 
 ### 3d iii.
 
 Result of the first call:
 
 **TODO: Complete this section**
+The result is an error.
 
 Result of the second call:
 
 **TODO: Complete this section**
+Assume the word is hello. The result is 1.
